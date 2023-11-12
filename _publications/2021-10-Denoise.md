@@ -2,9 +2,9 @@
 title: "Real-time Denoising Using BRDF Pre-integration Factorization"
 collection: publications
 permalink: /publication/BRDFDenoise
-excerpt: 'We present a new type of 3D visual reflection art - scratch-based reflection art.'
-date: 2023-08-01
-venue: 'ACM Transactions on Graphics (Proceedings of SIGGRAPH)'
+excerpt: 'We use BRDF pre-integration to do factorization before denoising, preserving more details for spatially varing BRDFs.'
+date: 2021-10-01
+venue: 'Computer Graphics Forum (Proceedings of Pacific Graphics)'
 paperurl: 'https://wangningbei.github.io/2023/DiffGlints_files/paper_diffGlints_compressed.pdf'
 citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 header:
