@@ -4,9 +4,8 @@ collection: publications
 permalink: /publication/DiffGlints
 excerpt: 'We present a new type of 3D visual reflection art - scratch-based reflection art. We derived algorithms that performs differentiable rendering on microstructures and built machine to manufacture real objects.'
 date: 2023-08-01
-venue: 'ACM Transactions on Graphics (Proceedings of SIGGRAPH)'
+venue: 'ACM Transactions on Graphics (Proceedings of SIGGRAPH 2023)'
 paperurl: 'https://wangningbei.github.io/2023/DiffGlints_files/paper_diffGlints_compressed.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 header:
     teaser: DiffGlintsTeaser.jpg
     teaserDescription: "We present a new type of 3D visual reflection art - scratch-based reflection art. Given four target images (bottom right), our method fabricates a set of scratches (closeup patches in the bottom left) on a single metallic board to display these images when viewed from four different directions. The photos (middle) are taken from four views respectively. To achieve that, we design analytical scratch geometric and shading models to enable differentiable rendering, which allows computationally efficient optimization eventually. An apple pencil is put near the board as a size reference."

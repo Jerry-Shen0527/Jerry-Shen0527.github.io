@@ -1,12 +1,12 @@
 ---
-title: 'A testing project'
-date: 2023-11-12
-permalink: /projects/2023/11/test-blog
-excerpt: This is a sample blog post.
+title: 'A Real-time Fluid Simulation Engine Using Ray Tracing Cores'
+date: 2023-10-01
+collection: projects
+permalink: /projects/2023/11/RTFluidSimu
+excerpt: We use ray tracing cores to perform nearby particles detection and implement local particle based simulation methods based on that.
 tags:
-  - cool posts
-  - category1
-  - category2
+  - Simulation
+  - GPU Programming
 ---
 
 This is a sample blog post. Lorem ipsum I can't remember the rest of lorem ipsum and don't have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.

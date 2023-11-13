@@ -4,12 +4,11 @@ collection: publications
 permalink: /publication/BRDFDenoise
 excerpt: 'We use BRDF pre-integration to do factorization before denoising, preserving more details for spatially varing BRDFs.'
 date: 2021-10-01
-venue: 'Computer Graphics Forum (Proceedings of Pacific Graphics)'
-paperurl: 'https://wangningbei.github.io/2023/DiffGlints_files/paper_diffGlints_compressed.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+venue: 'Computer Graphics Forum (Proceedings of Pacific Graphics 2021)'
+paperurl: 'https://doi.org/10.1111/cgf.14411'
 header:
-    teaser: DiffGlintsTeaser.jpg
-    teaserDescription: "We present a new type of 3D visual reflection art - scratch-based reflection art. Given four target images (bottom right), our method fabricates a set of scratches (closeup patches in the bottom left) on a single metallic board to display these images when viewed from four different directions. The photos (middle) are taken from four views respectively. To achieve that, we design analytical scratch geometric and shading models to enable differentiable rendering, which allows computationally efficient optimization eventually. An apple pencil is put near the board as a size reference."
+    teaser: PG-Demodu.jpg
+    teaserDescription: "Our method demodulates the BRDF pre-integration component from filtering and can be easily integrated into existing filtering algorithms. By combining with our method, both SVGF and ReLAX are able to preserve the fine details from BRDF maps much better."
 authors:
     - Tao-Zhuang
     - Pengfei-Shen
@@ -20,4 +19,4 @@ authors:
 
 Abstract
 =====
-The 3D visual optical arts create fascinating special effects by carefully designing interactions between objects and light sources. One of the essential types is 3D reflection art, which aims to create reflectors that can display different images when viewed from different directions. Existing works produce impressive visual effects. Unfortunately, previous works discretize the reflector surface with regular grids/facets, leading to a large parameter space and a high optimization time cost. In this paper, we introduce a new type of 3D reflection art - scratch-based reflection art, which allows for a more compact parameter space, easier fabrication, and computationally efficient optimization. To design a 3D reflection art with scratches, we formulate it as a multi-view optimization problem and introduce differentiable rendering to enable efficient gradient-based optimizers. For that, we propose an analytical scratch rendering approach, together with a high-performance rendering pipeline, allowing efficient differentiable rendering. As a consequence, we could display multiple images on a single metallic board with only several minutes for optimization. We demonstrate our work by showing virtual objects and manufacturing our designed reflectors with a carving machine.
+Path tracing has been used for real-time renderings, thanks to the powerful GPU device. Unfortunately, path tracing produces noisy rendered results, thus, filtering or denoising is often applied as a post-process to remove the noise. Previous works produce high-quality denoised results, by accumulating the temporal samples. However, they cannot handle the details from bidirectional reflectance distribution function (BRDF) maps (e.g. roughness map). In this paper, we introduce the BRDF pre-integration factorization for denoising to better preserve the details from BRDF maps. More specifically, we reformulate the rendering equation into two components: the BRDF pre-integration component and the weighted-lighting component. The BRDF pre-integration component is noise-free, since it does not depend on the lighting. Another key observation is that the weighted-lighting component tends to be smooth and low-frequency, which indicates that it is more suitable for denoising than the final rendered image. Hence, the weighted-lighting component is denoised individually. Our BRDF pre-integration demodulation approach is flexible for many real-time filtering methods. We have implemented it in spatio-temporal variance-guided filtering (SVGF), ReLAX and ReBLUR. Compared to the original methods, our method manages to better preserve the details from BRDF maps, while both the memory and time cost are negligible.

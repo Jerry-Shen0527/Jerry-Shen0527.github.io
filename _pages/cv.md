@@ -12,20 +12,19 @@ redirect_from:
 Education
 ======
 * B.S. in Physics, University of Science and Technology of China, 2021
+  * Minor degree in Computer Science.
 * M.S. in Applied Mathematics, University of Science and Technology of China, 2024 (expected)
+  * Advisor: Prof. {% include authors/Ligang-Liu.html %}
 
 Work experience
 ======
 * Winter 2021-2022: Graphics Engineer Intern
-  * miHoYo Co., Ltd.
-  * I implemented a SIGGRAPH paper into Unreal Engine.
+  * MiHoYo Co., Ltd.
+  * I implemented a SIGGRAPH paper into Unreal Engine for the project of [N0va Lumi](https://www.youtube.com/@Lumi_N0va).
 
 * Summer 2023: Research Intern
   * Tencent Games
-  * Duties included: Applying differentiable rendering 
-  * Supervisor: Professor Hub
-  
-
+  * Applying differentiable rendering to geometric modelling tasks.
 
 Publications
 ======
@@ -48,14 +47,25 @@ Teaching
 
 Skills
 ======
-* Skill 1
 * Programming
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+  * C/C++
+  * CUDA
+  * Python
+* DCC Tools and Game Engines
+  * Blender
+  * Houdini
+  * Unreal
+
+Awards
+======
+* Chinese National Scholoarship 2023
 
 
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* I led the student debating team of Department of Life Science to won the championship of university debating tournament 2018.
+
+Languages
+======
+* English: Professional proficiency.
+* Chinese: Native proficiency.
