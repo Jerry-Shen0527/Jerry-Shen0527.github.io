@@ -23,3 +23,5 @@ $$
 $$
 \underbrace{\mathbb{E}_{q(\mathbf{x})}\left[\frac{1}{2}\left\|\psi(\mathbf{x} ; \theta)-\frac{\partial \log q(\mathbf{x})}{\partial \mathbf{x}}\right\|^2\right]}_{J_{E S M q}(\theta)}=\underbrace{\mathbb{E}_{q(\mathbf{x})}\left[\frac{1}{2}\|\psi(\mathbf{x} ; \theta)\|^2+\sum_{i=1}^d \frac{\partial \psi_i(\mathbf{x} ; \theta)}{\partial \mathbf{x}_i}\right]}_{J_{I S M q}(\theta)}+C_1
 $$
+
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/Hh5w_c4vkCw" title="Fluid simulation aided by raytracing cores" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

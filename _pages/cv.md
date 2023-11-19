@@ -51,6 +51,7 @@ Skills
   * C/C++
   * CUDA
   * Python
+  * Mathematica
 * DCC Tools and Game Engines
   * Blender
   * Houdini
