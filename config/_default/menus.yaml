@@ -23,7 +23,7 @@ main:
     url: 'post'
     weight: 60
   - name: Resources
-    url: 'resources'
+    url: 'resource'
     weight: 70
   # - name: Contact
   #   url: '#contact'
