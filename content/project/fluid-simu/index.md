@@ -1,5 +1,5 @@
 ---
-title: Fluid Simulation with Raytracing Cores
+title: Fluid Simulation with Ray Tracing Cores
 summary: A Real-time Fluid Simulation Engine Using Ray Tracing Cores.
 tags:
   - Simulation

@@ -1,8 +1,9 @@
 ---
-title: Scratch-based Reflection Art via Differentiable Rendering
+title: Real-time Denoising Using BRDF Pre-integration Factorization
 
-event: Games Seminar
-event_url: https://www.bilibili.com/video/BV1kc411D7cK
+
+event: Pacific Graphics 20+21
+# event_url: https://www.bilibili.com/video/BV1kc411D7cK
 
 location: Online
 # address:
@@ -12,17 +13,17 @@ location: Online
 #   postcode: '94305'
 #   country: United States
 
-summary: An introduction to our work of scratch-based reflection art.
-abstract: 'The 3D visual optical arts create fascinating special effects by carefully designing interactions between objects and light sources. One of the essential types is 3D reflection art, which aims to create reflectors that can display different images when viewed from different directions. Existing works produce impressive visual effects. Unfortunately, previous works discretize the reflector surface with regular grids/facets, leading to a large parameter space and a high optimization time cost. In this paper, we introduce a new type of 3D reflection art - scratch-based reflection art, which allows for a more compact parameter space, easier fabrication, and computationally efficient optimization. To design a 3D reflection art with scratches, we formulate it as a multi-view optimization problem and introduce differentiable rendering to enable efficient gradient-based optimizers. For that, we propose an analytical scratch rendering approach, together with a high-performance rendering pipeline, allowing efficient differentiable rendering. As a consequence, we could display multiple images on a single metallic board with only several minutes for optimization. We demonstrate our work by showing virtual objects and manufacturing our designed reflectors with a carving machine.'
+summary: An introduction to our work of real-time denoising.
+abstract: 'Path tracing has been used for real-time renderings, thanks to the powerful GPU device. Unfortunately, path tracing produces noisy rendered results, thus, filtering or denoising is often applied as a post-process to remove the noise. Previous works produce high-quality denoised results, by accumulating the temporal samples. However, they cannot handle the details from bidirectional reflectance distribution function (BRDF) maps (e.g. roughness map). In this paper, we introduce the BRDF pre-integration factorization for denoising to better preserve the details from BRDF maps. More specifically, we reformulate the rendering equation into two components: the BRDF pre-integration component and the weighted-lighting component. The BRDF pre-integration component is noise-free, since it does not depend on the lighting. Another key observation is that the weighted-lighting component tends to be smooth and low-frequency, which indicates that it is more suitable for denoising than the final rendered image. Hence, the weighted-lighting component is denoised individually. Our BRDF pre-integration demodulation approach is flexible for many real-time filtering methods. We have implemented it in spatio-temporal variance-guided filtering (SVGF), ReLAX and ReBLUR. Compared to the original methods, our method manages to better preserve the details from BRDF maps, while both the memory and time cost are negligible.'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2023-12-07T20:30:00Z'
-date_end: '2023-12-07T21:00:00Z'
-all_day: false
+date: '2021-10-20T20:30:00Z'
+# date_end: '2021-12-07T21:00:00Z'
+all_day: true
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
+# publishDate: '2017-01-01T00:00:00Z'
 
 authors: []
 tags: []
@@ -31,8 +32,8 @@ tags: []
 featured: false
 
 # image:
-  # caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-  # focal_point: Right
+#   caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+#   focal_point: Right
 
 # links:
 #   - icon: twitter
