@@ -10,8 +10,8 @@ date: '2023-10-01T00:00:00Z'
 external_link: ''
 
 image:
-  caption: Photo by rawpixel on Unsplash
   focal_point: Smart
+  preview_only: true
 
 # links:
 #   - icon: twitter
