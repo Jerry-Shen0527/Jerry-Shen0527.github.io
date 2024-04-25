@@ -5,7 +5,7 @@ math: true
 # subtitle: 
 
 # Summary for listings and search engines
-summary: "Neural Bokeh: Learning Lens Blur for Computational Videography and Out-of-Focus Mixed Reality"
+summary: "Notes for reading *Neural Bokeh: Learning Lens Blur for Computational Videography and Out-of-Focus Mixed Reality*"
 
 tags: 
     - Paper Reading
