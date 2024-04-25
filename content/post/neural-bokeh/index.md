@@ -44,8 +44,6 @@ So each camera (both virtual and real-world) has its own network.
 
 > From a combination of those parameters, we compute the maximal size of the CoC, which serves as a hyper-parameter for adjusting the number of convolutions in the network.
 
-CoC is computed such 
-
 <div style="text-align:center;">
     <img src=image-1.png alt="alt text" style="width:70%;">
 </div>
