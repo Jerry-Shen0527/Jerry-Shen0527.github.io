@@ -68,11 +68,12 @@ For captured data, they use about the similar size of a dataset, while the depth
 
 ![alt text](image-3.png)
 
-This paper shows good results on the bokeh! But why?
+This paper shows good results on the bokeh, since it has the information of the camera model embedded in the virtual object adding neural network.
 
 ## Comments
-- The idea is overall cool. I am not an expert to this topic thus I cannot assess its position confidently. However, using NN to synthetic out-of-focus effect (especially on real-world captured data) seems useful.
-- I wonder why this paper is named neural bokeh, since it seems that it lacks special treatment for point luminance in the scene. Is it because the network happens to show good result on the bokeh effect? Or is it because one hyper-parameter is chosen as the maximal size of the CoC? CoC leads to bokeh but not only bokeh.
+- The idea is overall cool. Using NN to synthetic out-of-focus effect (especially on real-world captured data) is useful. 
+
+- The philosophy is pragamatic. We don't need to fully reconstruct the lens model, including the aperture, lens set and the sensor to add virtual objects to the final image. Just use a neural network to composite the final image.
 
 ---
 
