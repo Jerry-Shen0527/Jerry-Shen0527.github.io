@@ -32,12 +32,12 @@ url_video: ''
 ---
 
 # Introduction
-Being the TA for the CG course at USTC 2024 Spring, I collabrating with two other TAs built this framework. The idea/code is partially based on Blender. More details come later.
+Being the TA for the CG course at USTC 2024 Spring, I collabrating with two other TAs built this framework. The idea/code is partially based on Blender. More details will come later.
 
 # Students' Works
 Here are some of the students' works finished using this framework during this whole semester.
 ## Geometrical Processing
-![Node Graph](image-2.png)
+![Node Graph](featured.png)
 ![Minimal Surface](image-1.png)
 ![Yutian Zhu](image.png)
 ARAP
