@@ -1,6 +1,6 @@
 ---
 title: Code Skeleton for Computer Graphics Course at USTC 2024
-summary: A simple node based modeling/simulation/rendering framework.
+summary: A node based modeling/simulation/rendering framework.
 tags:
   - Simulation
   - GPU

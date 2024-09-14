@@ -43,7 +43,7 @@ education:
     #   year: 2024 -
     - course: M.S. in Applied Mathematics
       institution: University of Science and Technology of China
-      year: 2024 Expected
+      year: 2024
     - course: B.S. in Physics
       institution: University of Science and Technology of China
       year: 2021

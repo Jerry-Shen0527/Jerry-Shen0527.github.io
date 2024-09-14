@@ -89,13 +89,15 @@ sections:
   #   design:
   #     columns: '2'
   #     view: citation
-  - block: portfolio
+  - block: collection
     id: projects
     content:
       title: Projects
       filters:
         folders:
           - project
+    design:
+      columns: '2'
   #     # # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
   #     # default_button_index: 0
   #     # # Filter toolbar (optional).
