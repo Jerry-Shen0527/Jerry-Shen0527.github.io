@@ -170,6 +170,18 @@ sections:
   #   design:
   #     columns: '2'
 
+  - block: collection
+    id: achievements
+    content:
+      title: Awards
+      filters:
+        folders:
+          - awards
+    design:
+      view: card
+      columns: '2'
+       
+
   - block: experience
     content:
       title: Industrial Experience
