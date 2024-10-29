@@ -41,14 +41,16 @@ education:
     # - course: PhD student in Computer Science
     #   institution: The University of Hong Kong
     #   year: 2024 -
+
+    - course: Ph.D. in Electrical and Electronic Engineering
+      institution: The Uniersity of Hong Kong
+      year: 2024 -
+
     - course: M.S. in Applied Mathematics
       institution: University of Science and Technology of China
       year: 2024
-    - course: B.S. in Physics
-      institution: University of Science and Technology of China
-      year: 2021
-
-    - course: B.E. in Computer Science (Dual)
+    
+    - course: B.S. in Physics, B.E. in Computer Science (Dual)
       institution: University of Science and Technology of China
       year: 2021
 
@@ -126,4 +128,4 @@ social:
 highlight_name: true
 ---
 
-I am currently a third year Master student at [Geometry Computing Lab](http://gcl.ustc.edu.cn/) of University of Science and Technology of China, advised by Prof. [Ligang Liu](http://staff.ustc.edu.cn/~lgliu/) and Prof. [Beibei Wang](https://wangningbei.github.io/). I major in applied mathematics and my research interest lies in computer graphics and computational imaging. I am looking to combine computer graphics techniques with computational holography to create algorithms for the next generation display equipments.
+I am currently a first year PhD student at [WeLight Lab](https://hku.welight.fun/) at [the University of Hong Kong](https://www.hku.hk/), advised by Prof. [Evan Peng](https://www.eee.hku.hk/~evanpeng/). Previously to that, I did my Master study at [Geometry Computing Lab](http://gcl.ustc.edu.cn/) of [USTC](https://www.ustc.edu.cn/), advised by Prof. [Ligang Liu](http://staff.ustc.edu.cn/~lgliu/) and Prof. [Beibei Wang](https://wangningbei.github.io/). My research interest lies in computer graphics and computational imaging. I am looking to combine computer graphics techniques with computational holography to create algorithms for the next generation display equipments.
