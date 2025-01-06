@@ -17,14 +17,14 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Master Student
+role: PhD Student
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  # - name: The University of Hong Kong
-  #   url: https://www.hku.hk/
-  - name: University of Science and Technology of China 
-    url: https://ustc.edu.cn/
+  - name: The University of Hong Kong
+    url: https://www.hku.hk/
+  # - name: University of Science and Technology of China 
+  #   url: https://ustc.edu.cn/
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include computational imaging, realistic rendering and differentiable rendering.
