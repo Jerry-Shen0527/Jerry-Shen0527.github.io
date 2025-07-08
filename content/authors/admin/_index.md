@@ -35,18 +35,18 @@ interests:
 education:
   - area: Ph.D. in Electrical and Electronic Engineering
     institution: The University of Hong Kong
-    date_start: 2024-01-01
+    date_start: 2024-11-01
     date_end: ''
     
   - area: M.S. in Applied Mathematics
     institution: University of Science and Technology of China
-    date_start: 2021-01-01
-    date_end: 2024-12-31
+    date_start: 2021-09-01
+    date_end: 2024-06-30
   
   - area: B.S. in Physics, B.E. in Computer Science (Dual)
     institution: University of Science and Technology of China
-    date_start: 2017-01-01
-    date_end: 2021-12-31
+    date_start: 2017-09-01
+    date_end: 2021-06-30
 
 work:
   - position: Research Intern
@@ -70,8 +70,8 @@ work:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: at-symbol
-    url: '/#contact'
+  - icon: envelope
+    url: 'mailto:pengfei.shen@connect.hku.hk'
     label: E-mail Me
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=02yniQsAAAAJ

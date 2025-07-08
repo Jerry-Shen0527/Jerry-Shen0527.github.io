@@ -5,12 +5,16 @@ date: 2024-02-21
 type: landing
 
 sections:
-  - block: resume-biography-3
+  - block: custom-resume-biography
     id: about
     content:
       title: Biography
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
+    design:
+      spacing:
+        padding: ["20px", "0", "20px", "0"]
+      # css_style: "margin-bottom: 1.5rem !important; margin-top: 1.5rem !important;"
   # - block: skills
   #   content:
   #     title: Skills
@@ -73,8 +77,10 @@ sections:
           - publication
         # featured_only: true
     design:
-      view: article-grid
-      columns: '2'
+      view: card
+      #columns: '2'
+      spacing:
+        padding: ["20px", "0", "20px", "0"]
   # - block: collection
   #   content:
   #     title: Recent Publications
@@ -98,6 +104,9 @@ sections:
           - project
     design:
       columns: '2'
+      view: card
+      spacing:
+        padding: ["20px", "0", "20px", "0"]
   #     # # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
   #     # default_button_index: 0
   #     # # Filter toolbar (optional).
@@ -134,36 +143,40 @@ sections:
         folders:
           - event
     design:
-      columns: '2'
-      view: compact
+      columns: '1'
+      view: citation
+      spacing:
+        padding: ["20px", "0", "20px", "0"]
 
-  - block: collection
-    id: posts
-    content:
-      title: Recent Posts
-      subtitle: ''
-      text: ''
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 5
-      # Filter on criteria
-      filters:
-        folders:
-          - post
-        author: ""
-        category: ""
-        tag: ""
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ""
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      # Choose a layout view
-      view: compact
-      columns: '2'
+  # - block: collection
+  #   id: posts
+  #   content:
+  #     title: Recent Posts
+  #     subtitle: ''
+  #     text: ''
+  #     # Choose how many pages you would like to display (0 = all pages)
+  #     count: 5
+  #     # Filter on criteria
+  #     filters:
+  #       folders:
+  #         - post
+  #       author: ""
+  #       category: ""
+  #       tag: ""
+  #       exclude_featured: false
+  #       exclude_future: false
+  #       exclude_past: false
+  #       publication_type: ""
+  #     # Choose how many pages you would like to offset by
+  #     offset: 0
+  #     # Page order: descending (desc) or ascending (asc) date.
+  #     order: desc
+  #   design:
+  #     # Choose a layout view
+  #     view: date-title-summary
+  #     columns: '2'
+  #     spacing:
+  #       padding: ["20px", "0", "20px", "0"]
   # - block: tag_cloud
   #   content:
   #     title: Popular Topics
@@ -178,35 +191,39 @@ sections:
         folders:
           - awards
     design:
-      view: card
+      view: citation
       columns: '2'
+      spacing:
+        padding: ["20px", "0", "20px", "0"]
        
 
   - block: experience
+    id: experience
     content:
-      title: Industrial Experience
-      # Date format for experience
-      #   Refer to https://docs.hugoblox.com/customization/#date-format
-      date_format: Jan 2006
+      title: Experience
     design:
-      columns: '2'
+      columns: '0'
+      spacing:
+        padding: ["20px", "0", "20px", "0"]
 
-  - block: cta-card
-    id: contact
-    content:
-      title: Contact
-      text: |-
-        Feel free to reach out via email for academic or professional inquiries.
-      button:
-        text: Email Me
-        url: "mailto:pengfei.shen@connect.hku.hk"
-      # You can add more contact options below if needed
-      # phone: 888 888 88 88
-      # appointment_url: 'https://calendly.com'
-    design:
-      card:
-        css_class: "bg-primary-700"
-        css_style: ""
+  # - block: cta-card
+  #   id: contact
+  #   content:
+  #     title: Contact
+  #     text: |-
+  #       Feel free to reach out via email for academic or professional inquiries.
+  #     button:
+  #       text: Email Me
+  #       url: "mailto:pengfei.shen@connect.hku.hk"
+  #     # You can add more contact options below if needed
+  #     # phone: 888 888 88 88
+  #     # appointment_url: 'https://calendly.com'
+  #   design:
+  #     card:
+  #       css_class: "bg-primary"
+  #       css_style: ""
+  #     spacing:
+  #       padding: ["20px", "0", "20px", "0"]
 
 
 ---

@@ -17,7 +17,7 @@ authors:
     - Hanxiao Sun
     - Zibo Zhang
     - Yu Guo
-    - ligang-liu
+    - Ligang Liu
     - Ling-Qi Yan
     - Steve Marschner
     - Milos Hasan

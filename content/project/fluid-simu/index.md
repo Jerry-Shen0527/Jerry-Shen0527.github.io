@@ -35,7 +35,8 @@ url_video: ''
 We use ray tracing cores to perform nearby particles detection and implement local particle based simulation methods based on that.
 
 {{< youtube Hh5w_c4vkCw >}}
-
+ 
+# 
 # Ray Tracing Cores
 Just like the implementation of a lot of graphics pipeline, ray tracing is making everything simpler, especially when there is hardware-handled BVH building. For example, ray-traced shadow does not need us to swap passes and transfer textures and it has no limitation of resolution of the shadow map texture.
 

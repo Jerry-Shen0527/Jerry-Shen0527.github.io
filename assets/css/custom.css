@@ -1,0 +1,113 @@
+/* Custom styles to make page width narrower */
+.container,
+.container-lg,
+.container-xl,
+.container-xxl,
+.blox-container,
+.section,
+.main-content {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+/* Single page specific width controls */
+.max-w-screen-xl {
+    max-width: 1300px !important;
+}
+
+.max-w-6xl {
+    max-width: 1300px !important;
+}
+
+/* Article container for single pages */
+article main {
+    max-width: 1300px !important;
+}
+
+/* Prose content width */
+.prose {
+    max-width: 1000px !important;
+}
+
+/* Font size adjustments */
+body {
+    line-height: 1.6 !important;
+}
+
+h1 { font-size: 1.8rem !important; }
+h2 { font-size: 1.5rem !important; }
+h3 { font-size: 1.3rem !important; }
+h4 { font-size: 1.1rem !important; }
+h5 { font-size: 1rem !important; }
+h6 { font-size: 0.9rem !important; }
+
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-xl,
+    .container-xxl,
+    .max-w-screen-xl,
+    .max-w-6xl {
+        max-width: 1200px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-xl,
+    .container-xxl {
+        max-width: 1000px !important;
+    }
+}
+
+@media (min-width: 1300px) {
+    .max-w-screen-xl,
+    .max-w-6xl {
+        max-width: 1400px !important;
+    }
+}
+
+/* Abstract and publication metadata section - make it wider */
+.max-w-prose.grid.grid-cols-1.md\:grid-cols-\[200px_auto\] {
+    max-width: 730px !important;
+}
+
+/* Alternative selector for the abstract section */
+main .max-w-prose.grid {
+    max-width: 800px !important;
+}
+
+/* Hide author avatars in single page layouts */
+article main .group img.rounded-full {
+    display: none !important;
+}
+
+/* Alternative more specific selector if needed */
+.text-gray-500 .group img {
+    display: none !important;
+}
+
+/* Hide avatars in author lists specifically */
+.group.inline-flex.items-center img.rounded-full {
+    display: none !important;
+}
+
+/* Replace hidden avatar with comma - only for non-first authors */
+.group.inline-flex.items-center:has(img.rounded-full)::before {
+    content: ",";
+    margin-right: 0.5rem;
+}
+
+/* Remove comma for the first author */
+.text-gray-500 .group.inline-flex.items-center:first-of-type:has(img.rounded-full)::before {
+    content: "";
+    margin-right: 0;
+}
+
+/* Remove the gap that was used for avatars */
+.group.inline-flex.items-center {
+    gap: 0 !important;
+}
+

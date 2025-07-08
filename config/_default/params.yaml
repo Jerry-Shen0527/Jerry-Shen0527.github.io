@@ -61,3 +61,19 @@ features:
     enable: false
   privacy_pack:
     enable: false
+
+# Custom CSS
+plugins_css: ["custom"]
+locale:
+  date_format: 'Jan 2, 2006'
+  time_format: '3:04 PM'
+
+# Site features
+features:
+  math:
+    enable: false
+  privacy_pack:
+    enable: false
+
+# Custom CSS
+plugins_css: ["custom"]
