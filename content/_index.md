@@ -5,7 +5,7 @@ date: 2024-02-21
 type: landing
 
 sections:
-  - block: about.biography
+  - block: resume-biography-3
     id: about
     content:
       title: Biography
@@ -73,8 +73,8 @@ sections:
           - publication
         # featured_only: true
     design:
+      view: article-grid
       columns: '2'
-      view: card
   # - block: collection
   #   content:
   #     title: Recent Publications
@@ -213,7 +213,7 @@ sections:
     design:
       columns: '2'
 
-  - block: contact
+  - block: cta-card
     id: contact
     content:
       title: Contact

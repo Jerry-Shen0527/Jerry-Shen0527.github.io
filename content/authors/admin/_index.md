@@ -37,22 +37,21 @@ interests:
 
 # Education to show in About widget
 education:
-  courses:
     # - course: PhD student in Computer Science
     #   institution: The University of Hong Kong
     #   year: 2024 -
 
-    - course: Ph.D. in Electrical and Electronic Engineering
-      institution: The Uniersity of Hong Kong
-      year: 2024 -
+  - area: Ph.D. in Electrical and Electronic Engineering
+    institution: The Uniersity of Hong Kong
+    year: 2024 -
 
-    - course: M.S. in Applied Mathematics
-      institution: University of Science and Technology of China
-      year: 2024
-    
-    - course: B.S. in Physics, B.E. in Computer Science (Dual)
-      institution: University of Science and Technology of China
-      year: 2021
+  - area: M.S. in Applied Mathematics
+    institution: University of Science and Technology of China
+    year: 2024
+  
+  - area: B.S. in Physics, B.E. in Computer Science (Dual)
+    institution: University of Science and Technology of China
+    year: 2021
 
 # # Skills
 # # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons

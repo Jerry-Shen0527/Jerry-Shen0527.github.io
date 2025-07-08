@@ -12,7 +12,7 @@ summary: Welcome 👋 to the document for the code skeleton!
 #   2 = Compact
 #   3 = Card
 #   4 = Citation
-view: 3
+view: card
 
 
 
