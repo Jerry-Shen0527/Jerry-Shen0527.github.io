@@ -2,7 +2,7 @@
 title: "Enhanced Velocity Field Modeling for Gaussian Video Reconstruction"
 
 summary: 'We introduce FlowGaussian-VR, a velocity field modeling approach for high-fidelity 3D video reconstruction using Gaussian splatting. Our method addresses challenges in dynamic scenes with complex motion and scale variations by integrating optical flow-based optimization and adaptive densification strategies. Experiments on real-world datasets show improved visual quality, reduced artifacts, and more regularized Gaussian trajectories compared to prior methods.'
-date: 2025-10-08
+date: 2025-07-30
 
 publication_types: ["article-conference"]
 publication_short: '*ISMAR 2025*'
