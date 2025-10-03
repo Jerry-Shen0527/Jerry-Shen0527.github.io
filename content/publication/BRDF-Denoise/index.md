@@ -14,6 +14,8 @@ image:
   focal_point: ""
   preview_only: false
 
+featured: true
+
 # image: 
 #     PG-Demodu.jpg
     # teaserDescription: "Our method demodulates the BRDF pre-integration component from filtering and can be easily integrated into existing filtering algorithms. By combining with our method, both SVGF and ReLAX are able to preserve the fine details from BRDF maps much better."

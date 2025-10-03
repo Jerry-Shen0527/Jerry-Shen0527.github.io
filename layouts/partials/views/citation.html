@@ -1,0 +1,57 @@
+{{ $item := .item }}
+
+{{ $link := $item.RelPermalink }}
+{{ $target := "" }}
+{{ if $item.Params.external_link }}
+  {{ $link = $item.Params.external_link }}
+  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ end }}
+
+<div class="mb-6">
+  <p class="text-base text-gray-900 dark:text-gray-100 mb-1">
+    {{ if $item.Params.authors }}
+      {{ $authorLinks := slice }}
+      {{ range $item.Params.authors }}
+        {{ if eq . "admin" }}
+          {{ $authorLinks = $authorLinks | append "<strong>Pengfei Shen</strong>" }}
+        {{ else }}
+          {{ $cleanAuthor := . | replaceRE "\\^[0-9]+\\^" "" | replaceRE "\\*$" "" }}
+          {{ $authorLinks = $authorLinks | append $cleanAuthor }}
+        {{ end }}
+      {{ end }}
+      {{ delimit $authorLinks ", " | safeHTML }}
+    {{ end }}
+    ({{ $item.Date.Format "2006" }}). 
+    <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 underline">
+      {{ $item.Title }}
+    </a>.
+    {{ if $item.Params.publication }}
+      <em>{{ $item.Params.publication | markdownify }}</em>.
+    {{ end }}
+  </p>
+  
+  {{ if or $item.Params.url_pdf $item.Params.external_link $item.Params.url_code $item.Params.url_video }}
+  <p class="text-sm">
+    {{ if $item.Params.url_pdf }}
+    <a href="{{ $item.Params.url_pdf }}" target="_blank" rel="noopener" class="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 mr-3">
+      📄 PDF
+    </a>
+    {{ end }}
+    {{ if $item.Params.external_link }}
+    <a href="{{ $item.Params.external_link }}" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 mr-3">
+      🔗 Link
+    </a>
+    {{ end }}
+    {{ if $item.Params.url_code }}
+    <a href="{{ $item.Params.url_code }}" target="_blank" rel="noopener" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 mr-3">
+      💻 Code
+    </a>
+    {{ end }}
+    {{ if $item.Params.url_video }}
+    <a href="{{ $item.Params.url_video }}" target="_blank" rel="noopener" class="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 mr-3">
+      🎥 Video
+    </a>
+    {{ end }}
+  </p>
+  {{ end }}
+</div>

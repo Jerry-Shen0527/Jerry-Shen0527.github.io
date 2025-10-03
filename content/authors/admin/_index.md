@@ -67,6 +67,9 @@ work:
     summary: |
       Implemented a SIGGRAPH paper into Unreal Engine for the project of N0va Lumi.
 
+# External link for author linking in publications  
+external_link: https://jerry-shen0527.github.io/
+
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:

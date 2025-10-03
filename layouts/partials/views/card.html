@@ -29,15 +29,16 @@
         
         {{ if $item.Params.authors }}
         <p class="block mt-1 text-sm leading-tight font-medium text-gray-700 dark:text-gray-300">
-          {{ $authors := slice }}
+          {{ $authorLinks := slice }}
           {{ range $item.Params.authors }}
             {{ if eq . "admin" }}
-              {{ $authors = $authors | append "Pengfei Shen" }}
+              {{ $authorLinks = $authorLinks | append "<strong>Pengfei Shen</strong>" }}
             {{ else }}
-              {{ $authors = $authors | append . }}
+              {{ $cleanAuthor := . | replaceRE "\\^[0-9]+\\^" "" | replaceRE "\\*$" "" }}
+              {{ $authorLinks = $authorLinks | append $cleanAuthor }}
             {{ end }}
           {{ end }}
-          {{ delimit $authors ", " }}
+          {{ delimit $authorLinks ", " | safeHTML }}
         </p>
         {{ end }}
         
