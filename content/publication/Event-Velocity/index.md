@@ -25,7 +25,6 @@ author_affiliations:
     - "^2^State Key Laboratory of Computer-aided Design & Computer Graphics, Zhejiang University"
 
 author_notes: "†These authors contributed equally.  *Corresponding author"
-show_citation: true
 math: true
 ---
 

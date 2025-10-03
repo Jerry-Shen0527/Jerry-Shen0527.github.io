@@ -20,6 +20,5 @@ authors:
 author_affiliations:
     - "^1^The University of Hong Kong"
 
-show_citation: true
 math: true
 ---

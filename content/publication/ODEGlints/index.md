@@ -23,6 +23,5 @@ author_affiliations:
     - "^2^Shenzhen University"
 
 author_notes: "*Corresponding author"
-show_citation: true
 math: true
 ---
