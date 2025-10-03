@@ -16,5 +16,8 @@ authors:
     - Tongchen Zhang
     - admin
     - Weiwei Xu
-    - Yifan Peng
+    - "Yifan Peng*"
+
+author_notes: "*Corresponding author"
+show_citation: true
 ---

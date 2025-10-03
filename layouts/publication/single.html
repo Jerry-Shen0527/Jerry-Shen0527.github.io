@@ -1,0 +1,157 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto px-4 py-8 text-center">
+  <!-- Featured Image -->
+  {{ $featured := .Resources.GetMatch "featured.*" }}
+  {{ if $featured }}
+  <div class="mb-8 flex justify-center">
+    <img src="{{ $featured.RelPermalink }}" alt="{{ .Title }}" class="max-w-full max-h-96 h-auto rounded-lg shadow-lg">
+  </div>
+  {{ end }}
+  
+  <!-- Header Section -->
+  <header class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      {{ .Title }}
+    </h1>
+    
+    <!-- Authors -->
+    {{ if .Params.authors }}
+    <div class="mb-4">
+      <div class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        {{ $authorLinks := slice }}
+        {{ range .Params.authors }}
+          {{ $authorName := . }}
+          {{ if eq . "admin" }}
+            {{ $authorName = "Pengfei Shen" }}
+            {{ $authorPage := site.GetPage "/authors/admin" }}
+            {{ if and $authorPage $authorPage.Params.external_link }}
+              {{ $authorLinks = $authorLinks | append (printf "<a href=\"%s\" target=\"_blank\" rel=\"noopener\" class=\"text-primary-600 dark:text-primary-400 hover:underline\">%s</a>" $authorPage.Params.external_link $authorName) }}
+            {{ else }}
+              {{ $authorLinks = $authorLinks | append $authorName }}
+            {{ end }}
+          {{ else }}
+            {{ $authorPage := site.GetPage (printf "/authors/%s" .) }}
+            {{ if and $authorPage $authorPage.Params.external_link }}
+              {{ $authorLinks = $authorLinks | append (printf "<a href=\"%s\" target=\"_blank\" rel=\"noopener\" class=\"text-primary-600 dark:text-primary-400 hover:underline\">%s</a>" $authorPage.Params.external_link $authorName) }}
+            {{ else }}
+              {{ $authorLinks = $authorLinks | append $authorName }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        <p class="mb-2">{{ delimit $authorLinks ", " | safeHTML }}</p>
+        
+        <!-- Author affiliations and notes -->
+        {{ if .Params.author_affiliations }}
+        <div class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+          {{ range .Params.author_affiliations }}
+          <p class="mb-1">{{ . | markdownify }}</p>
+          {{ end }}
+        </div>
+        {{ end }}
+        
+        {{ if .Params.author_notes }}
+        <div class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+          {{ .Params.author_notes | markdownify }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    
+    <!-- Publication Info -->
+    {{ if .Params.publication }}
+    <div class="mb-4">
+      <p class="text-lg font-semibold text-primary-700 dark:text-primary-300">
+        {{ .Params.publication | markdownify }}
+      </p>
+    </div>
+    {{ end }}
+    
+    <!-- Date -->
+    <p class="text-gray-600 dark:text-gray-400 mb-6">
+      {{ .Date | time.Format (site.Params.locale.date_format | default ":date_long") }}
+    </p>
+    
+    <!-- Action Buttons -->
+    {{ if or .Params.url_pdf .Params.external_link .Params.url_code .Params.url_video }}
+    <div class="flex flex-wrap gap-3 mb-8">
+      {{ if .Params.url_pdf }}
+      <a href="{{ .Params.url_pdf }}" target="_blank" rel="noopener" 
+         class="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+        📄 PDF
+      </a>
+      {{ end }}
+      
+      {{ if .Params.external_link }}
+      <a href="{{ .Params.external_link }}" target="_blank" rel="noopener"
+         class="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-green-600 text-white hover:bg-green-700 transition-colors">
+        🔗 External Link
+      </a>
+      {{ end }}
+      
+      {{ if .Params.url_code }}
+      <a href="{{ .Params.url_code }}" target="_blank" rel="noopener"
+         class="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-gray-800 text-white hover:bg-gray-900 transition-colors">
+        💻 Code
+      </a>
+      {{ end }}
+      
+      {{ if .Params.url_video }}
+      <a href="{{ .Params.url_video }}" target="_blank" rel="noopener"
+         class="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-red-600 text-white hover:bg-red-700 transition-colors">
+        🎥 Video
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+  
+  <!-- Abstract Section -->
+  {{ if .Params.abstract }}
+  <section class="mb-8">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Abstract</h2>
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+        {{ .Params.abstract | markdownify }}
+      </p>
+    </div>
+  </section>
+  {{ end }}
+  
+  <!-- Summary Section -->
+  {{ if .Params.summary }}
+  <section class="mb-8">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Summary</h2>
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+        {{ .Params.summary | markdownify }}
+      </p>
+    </div>
+  </section>
+  {{ end }}
+  
+  <!-- Main Content -->
+  {{ if .Content }}
+  <section class="mb-8">
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      {{ .Content }}
+    </div>
+  </section>
+  {{ end }}
+  
+  <!-- Citation Section -->
+  {{ if .Params.show_citation }}
+  <section class="mb-8">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Citation</h2>
+    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+      <pre class="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap text-left"><code>{{ if .Params.custom_citation }}{{ .Params.custom_citation }}{{ else }}@article{{ "{" }}{{ .Title | replaceRE "[^a-zA-Z0-9]" "" | lower }},
+  title={{ "{" }}{{ .Title }}{{ "}" }},
+  author={{ "{" }}{{ range $i, $author := .Params.authors }}{{ if $i }}, {{ end }}{{ if eq $author "admin" }}Pengfei Shen{{ else }}{{ $author }}{{ end }}{{ end }}{{ "}" }},
+  year={{ "{" }}{{ .Date.Year }}{{ "}" }},
+  {{ if .Params.publication_short }}journal={{ "{" }}{{ .Params.publication_short }}{{ "}" }},{{ end }}
+{{ "}" }}{{ end }}</code></pre>
+    </div>
+  </section>
+  {{ end }}
+</article>
+{{ end }}
