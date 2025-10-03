@@ -13,10 +13,10 @@ organizations:
 
 external_link: https://lagrangeli.github.io/
 
-social:
-  - icon: envelope
-    icon_pack: fas
-    link: '/#contact'
+# social:
+#   - icon: envelope
+#     icon_pack: fas
+#     link: '/#contact'
 #   # - icon: twitter
 #   #   icon_pack: fab
 #   #   link: https://twitter.com/GeorgeCushen

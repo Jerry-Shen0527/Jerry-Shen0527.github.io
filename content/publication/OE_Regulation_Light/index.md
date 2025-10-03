@@ -1,5 +1,5 @@
 ---
-title: "Regulation-aware freeform headlamp reflector design with differentiable ray tracing"
+title: "Regulation-Aware Freeform Headlamp Reflector Design with Differentiable Ray Tracing"
 
 summary: 'We propose a regulation-aware approach to freeform headlamp reflector design using differentiable ray tracing with B-spline surface arrays and multi-layer perceptrons to generate light intensity distributions.'
 date: 2025-07-01

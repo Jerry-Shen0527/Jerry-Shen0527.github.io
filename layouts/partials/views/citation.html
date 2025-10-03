@@ -14,8 +14,11 @@
       {{ range $item.Params.authors }}
         {{ if eq . "admin" }}
           {{ $authorLinks = $authorLinks | append "<strong>Pengfei Shen</strong>" }}
+        {{ else if (strings.Contains . "admin") }}
+          {{ $cleanAuthor := . | replaceRE "admin" "Pengfei Shen" | replaceRE "\\^[0-9]+\\^" "" | replaceRE "\\*$" "" | replaceRE "†" "" }}
+          {{ $authorLinks = $authorLinks | append (printf "<strong>%s</strong>" $cleanAuthor) }}
         {{ else }}
-          {{ $cleanAuthor := . | replaceRE "\\^[0-9]+\\^" "" | replaceRE "\\*$" "" }}
+          {{ $cleanAuthor := . | replaceRE "\\^[0-9]+\\^" "" | replaceRE "\\*$" "" | replaceRE "†" "" }}
           {{ $authorLinks = $authorLinks | append $cleanAuthor }}
         {{ end }}
       {{ end }}
