@@ -1,16 +1,24 @@
 {{ define "main" }}
-<div class="container mx-auto px-4 py-8">
-<article class="max-w-4xl mx-auto">
-  <!-- Header Section -->
-  <header class="mb-8 text-center">
-    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+<!-- Header Section - Full Width Title -->
+<header class="mb-6 text-center w-full py-4">
+  <!-- Title container: full width, no max-width constraints -->
+  <div class="w-full px-4">
+    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
       {{ .Title }}
     </h1>
+  </div>
+</header>
+
+<div class="container mx-auto px-4 py-4">
+<article class="max-w-4xl mx-auto">
+  <!-- Content Header Section -->
+  <div class="mb-8 text-center">
+    
     
     <!-- Authors -->
     {{ if .Params.authors }}
-    <div class="mb-4">
-      <div class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+    <div class="mb-6">
+      <div class="text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-5xl mx-auto px-2">
         {{ $authorLinks := slice }}
         {{ range .Params.authors }}
           {{ $authorName := . }}
@@ -55,14 +63,14 @@
     <!-- Publication Info -->
     {{ if .Params.publication }}
     <div class="mb-4">
-      <p class="text-lg font-semibold text-primary-700 dark:text-primary-300">
+      <p class="text-xl md:text-2xl font-semibold text-primary-700 dark:text-primary-300">
         {{ .Params.publication | markdownify }}
       </p>
     </div>
     {{ end }}
     
     <!-- Date -->
-    <p class="text-gray-600 dark:text-gray-400 mb-6">
+    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
       {{ .Date | time.Format (site.Params.locale.date_format | default ":date_long") }}
     </p>
     
@@ -98,13 +106,22 @@
       {{ end }}
     </div>
     {{ end }}
-  </header>
+  </div>
   
   <!-- Featured Image -->
   {{ $featured := .Resources.GetMatch "featured.*" }}
   {{ if $featured }}
-  <div class="mb-8 flex justify-center">
-    <img src="{{ $featured.RelPermalink }}" alt="{{ .Title }}" class="max-w-4xl max-h-96 w-auto h-auto rounded-lg shadow-lg">
+  <div class="mb-8">
+    <div class="max-w-4xl mx-auto mb-4">
+      <img src="{{ $featured.RelPermalink }}" alt="{{ .Title }}" class="w-full h-auto rounded-lg shadow-lg">
+    </div>
+    {{ if .Params.featured_caption }}
+    <div class="max-w-4xl mx-auto">
+      <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 text-center italic leading-relaxed">
+        {{ .Params.featured_caption | markdownify }}
+      </p>
+    </div>
+    {{ end }}
   </div>
   {{ end }}
   
@@ -116,6 +133,15 @@
       <div class="text-gray-700 dark:text-gray-300 leading-relaxed prose prose-lg dark:prose-invert max-w-none" style="text-align: justify; text-justify: inter-word;">
         {{ .Params.abstract | markdownify }}
       </div>
+    </div>
+  </section>
+  {{ end }}
+  
+  <!-- Main Content -->
+  {{ if .Content }}
+  <section class="mb-8">
+    <div class="max-w-4xl mx-auto prose prose-lg dark:prose-invert max-w-none" style="text-align: justify; text-justify: inter-word;">
+      {{ .Content }}
     </div>
   </section>
   {{ end }}
@@ -132,26 +158,17 @@
   </section>
   {{ end }}
   
-  <!-- Main Content -->
-  {{ if .Content }}
-  <section class="mb-8">
-    <div class="max-w-4xl mx-auto prose prose-lg dark:prose-invert max-w-none" style="text-align: justify; text-justify: inter-word;">
-      {{ .Content }}
-    </div>
-  </section>
-  {{ end }}
-  
   <!-- Citation Section -->
   {{ if .Params.show_citation }}
   <section class="mb-8">
     <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">Citation</h2>
     <div class="max-w-4xl mx-auto">
       <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-        <pre class="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap text-left"><code>{{ if .Params.custom_citation }}{{ .Params.custom_citation }}{{ else }}@article{{ "{" }}{{ .Title | replaceRE "[^a-zA-Z0-9]" "" | lower }},
-  title={{ "{" }}{{ .Title }}{{ "}" }},
-  author={{ "{" }}{{ range $i, $author := .Params.authors }}{{ if $i }}, {{ end }}{{ if eq $author "admin" }}Pengfei Shen{{ else }}{{ $author }}{{ end }}{{ end }}{{ "}" }},
-  year={{ "{" }}{{ .Date.Year }}{{ "}" }},
-  {{ if .Params.publication_short }}journal={{ "{" }}{{ .Params.publication_short }}{{ "}" }},{{ end }}
+        <pre class="text-sm text-gray-800 dark:text-gray-200 text-left" style="white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; tab-size: 4;"><code>{{ if .Params.custom_citation }}{{ .Params.custom_citation }}{{ else }}@article{{ "{" }}{{ .Title | replaceRE "[^a-zA-Z0-9]" "" | lower }},
+    title={{ "{" }}{{ .Title }}{{ "}" }},
+    author={{ "{" }}{{ range $i, $author := .Params.authors }}{{ if $i }}, {{ end }}{{ if eq $author "admin" }}Pengfei Shen{{ else }}{{ $author | replaceRE "\\*$" "" | replaceRE "\\^[0-9]+\\^" "" }}{{ end }}{{ end }}{{ "}" }},
+    year={{ "{" }}{{ .Date.Year }}{{ "}" }},{{ if .Params.publication_short }}
+    journal={{ "{" }}{{ .Params.publication_short }}{{ "}" }},{{ end }}
 {{ "}" }}{{ end }}</code></pre>
       </div>
     </div>
