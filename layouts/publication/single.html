@@ -1,15 +1,8 @@
 {{ define "main" }}
-<article class="max-w-4xl mx-auto px-4 py-8 text-center">
-  <!-- Featured Image -->
-  {{ $featured := .Resources.GetMatch "featured.*" }}
-  {{ if $featured }}
-  <div class="mb-8 flex justify-center">
-    <img src="{{ $featured.RelPermalink }}" alt="{{ .Title }}" class="max-w-full max-h-96 h-auto rounded-lg shadow-lg">
-  </div>
-  {{ end }}
-  
+<div class="container mx-auto px-4 py-8">
+<article class="max-w-4xl mx-auto">
   <!-- Header Section -->
-  <header class="mb-8">
+  <header class="mb-8 text-center">
     <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
       {{ .Title }}
     </h1>
@@ -30,6 +23,7 @@
               {{ $authorLinks = $authorLinks | append $authorName }}
             {{ end }}
           {{ else }}
+            {{ $authorName = . | replaceRE "\\^([0-9]+)\\^" "<sup>$1</sup>" | safeHTML }}
             {{ $authorPage := site.GetPage (printf "/authors/%s" .) }}
             {{ if and $authorPage $authorPage.Params.external_link }}
               {{ $authorLinks = $authorLinks | append (printf "<a href=\"%s\" target=\"_blank\" rel=\"noopener\" class=\"text-primary-600 dark:text-primary-400 hover:underline\">%s</a>" $authorPage.Params.external_link $authorName) }}
@@ -106,14 +100,22 @@
     {{ end }}
   </header>
   
+  <!-- Featured Image -->
+  {{ $featured := .Resources.GetMatch "featured.*" }}
+  {{ if $featured }}
+  <div class="mb-8 flex justify-center">
+    <img src="{{ $featured.RelPermalink }}" alt="{{ .Title }}" class="max-w-4xl max-h-96 w-auto h-auto rounded-lg shadow-lg">
+  </div>
+  {{ end }}
+  
   <!-- Abstract Section -->
   {{ if .Params.abstract }}
   <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Abstract</h2>
-    <div class="prose prose-lg dark:prose-invert max-w-none">
-      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">Abstract</h2>
+    <div class="max-w-4xl mx-auto">
+      <div class="text-gray-700 dark:text-gray-300 leading-relaxed prose prose-lg dark:prose-invert max-w-none" style="text-align: justify; text-justify: inter-word;">
         {{ .Params.abstract | markdownify }}
-      </p>
+      </div>
     </div>
   </section>
   {{ end }}
@@ -121,11 +123,11 @@
   <!-- Summary Section -->
   {{ if .Params.summary }}
   <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Summary</h2>
-    <div class="prose prose-lg dark:prose-invert max-w-none">
-      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">Summary</h2>
+    <div class="max-w-4xl mx-auto">
+      <div class="text-gray-700 dark:text-gray-300 leading-relaxed prose prose-lg dark:prose-invert max-w-none" style="text-align: justify; text-justify: inter-word;">
         {{ .Params.summary | markdownify }}
-      </p>
+      </div>
     </div>
   </section>
   {{ end }}
@@ -133,7 +135,7 @@
   <!-- Main Content -->
   {{ if .Content }}
   <section class="mb-8">
-    <div class="prose prose-lg dark:prose-invert max-w-none">
+    <div class="max-w-4xl mx-auto prose prose-lg dark:prose-invert max-w-none" style="text-align: justify; text-justify: inter-word;">
       {{ .Content }}
     </div>
   </section>
@@ -142,16 +144,19 @@
   <!-- Citation Section -->
   {{ if .Params.show_citation }}
   <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Citation</h2>
-    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-      <pre class="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap text-left"><code>{{ if .Params.custom_citation }}{{ .Params.custom_citation }}{{ else }}@article{{ "{" }}{{ .Title | replaceRE "[^a-zA-Z0-9]" "" | lower }},
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">Citation</h2>
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+        <pre class="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap text-left"><code>{{ if .Params.custom_citation }}{{ .Params.custom_citation }}{{ else }}@article{{ "{" }}{{ .Title | replaceRE "[^a-zA-Z0-9]" "" | lower }},
   title={{ "{" }}{{ .Title }}{{ "}" }},
   author={{ "{" }}{{ range $i, $author := .Params.authors }}{{ if $i }}, {{ end }}{{ if eq $author "admin" }}Pengfei Shen{{ else }}{{ $author }}{{ end }}{{ end }}{{ "}" }},
   year={{ "{" }}{{ .Date.Year }}{{ "}" }},
   {{ if .Params.publication_short }}journal={{ "{" }}{{ .Params.publication_short }}{{ "}" }},{{ end }}
 {{ "}" }}{{ end }}</code></pre>
+      </div>
     </div>
   </section>
   {{ end }}
 </article>
+</div>
 {{ end }}
