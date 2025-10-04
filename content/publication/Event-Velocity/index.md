@@ -134,6 +134,53 @@ Our method achieves significant improvements over state-of-the-art baselines:
 *[Figure 5: Novel View Synthesis Results - "Truck" scene with velocity field visualization]*
 <!-- LaTeX: \label{fig:sota nvidia-long}, figures/nvidia-sota.pdf -->
 
+#### Video Comparisons
+
+Below we present video comparisons between the baseline method and our approach across various challenging scenes:
+
+<table>
+<tr>
+<th width="50%">Baseline</th>
+<th width="50%">Ours</th>
+</tr>
+<tr>
+<td width="50%"><video width="100%" controls><source src="videos/balloon1-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="videos/balloon1-ours.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td width="50%"><video width="100%" controls><source src="videos/beef-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="videos/beef-ours.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td width="50%"><video width="100%" controls><source src="videos/dynamicface-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="videos/dynamicface-ours.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td width="50%"><video width="100%" controls><source src="videos/flame-steak-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="videos/flame-steak-ours.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td width="50%"><video width="100%" controls><source src="videos/martini-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="videos/martini-ours.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td width="50%"><video width="100%" controls><source src="videos/salmon-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="videos/salmon-ours.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td width="50%"><video width="100%" controls><source src="videos/sear-steak-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="videos/sear-ours.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td width="50%"><video width="100%" controls><source src="videos/truck-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="videos/truck-ours.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td width="50%"><video width="100%" controls><source src="videos/umbrella-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="videos/umbrella-ours.mp4" type="video/mp4"></video></td>
+</tr>
+</table>
+
 <img src="fig8.PNG" alt="Qualitative Comparisons" style="width: 100%; height: auto; margin: 0 auto; display: block;">
 
 *[Figure 6: Qualitative Comparisons - multiple scenes showing improved dynamic reconstruction]*
