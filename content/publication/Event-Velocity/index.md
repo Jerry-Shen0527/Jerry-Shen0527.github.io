@@ -144,40 +144,40 @@ Below we present video comparisons between the baseline method and our approach 
 <th width="50%">Ours</th>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="videos/balloon1-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="videos/balloon1-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/balloon1-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/balloon1-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="videos/beef-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="videos/beef-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/beef-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/beef-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="videos/dynamicface-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="videos/dynamicface-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/dynamicface-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/dynamicface-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="videos/flame-steak-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="videos/flame-steak-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/flame-steak-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/flame-steak-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="videos/martini-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="videos/martini-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/martini-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/martini-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="videos/salmon-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="videos/salmon-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/salmon-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/salmon-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="videos/sear-steak-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="videos/sear-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/sear-steak-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/sear-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="videos/truck-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="videos/truck-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/truck-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/truck-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="videos/umbrella-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="videos/umbrella-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/umbrella-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/umbrella-ours.mp4" type="video/mp4"></video></td>
 </tr>
 </table>
 
