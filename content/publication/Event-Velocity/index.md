@@ -52,7 +52,7 @@ $$V(\mathbf{p}) = \sum_{i=1}^{N} \alpha_i \, v_i \, \prod_{j=1}^i (1 - \alpha_j)
 
 This rendered velocity field serves as a differentiable approximation of optical flow, enabling direct supervision of Gaussian motion through backpropagation.
 
-<img src="image-1.png" alt="Velocity Rendering Process" style="width: 60%; height: auto; margin: 0 auto; display: block;">
+<img src="image-1.png" alt="Velocity Rendering Process" style="width: 50%; height: auto; margin: 0 auto; display: block;">
 
 *[Figure 2: Velocity Rendering Process - alpha-blending of Gaussian velocities]*
 <!-- LaTeX: \label{fig:velocity rendering}, figures/VR.pdf -->
@@ -74,7 +74,7 @@ These losses work synergistically to constrain Gaussian motion while preserving 
 
 ### Flow-assisted Adaptive Densification (FAD)
 
-<img src="image-2.png" alt="FAD Strategy" style="width: 60%; height: auto; margin: 0 auto; display: block;">
+<img src="image-2.png" alt="FAD Strategy" style="width: 50%; height: auto; margin: 0 auto; display: block;">
 
 *[Figure 3: FAD Strategy - shows flow-guided Gaussian densification process]*
 <!-- LaTeX: \label{fig:fad}, figures/fad.pdf -->
@@ -100,7 +100,7 @@ EKF refines Gaussian motion by defining state transition $\mathbf{f}(\mathbf{x}_
 
 Key strategies include surface Gaussian filtering and accumulated flow localization to prevent error propagation.
 
-<img src="image-3.png" alt="TVR Trajectory Correction" style="width: 60%; height: auto; margin: 0 auto; display: block;">
+<img src="image-3.png" alt="TVR Trajectory Correction" style="width: 50%; height: auto; margin: 0 auto; display: block;">
 
 *[Figure 4: TVR Trajectory Correction - shows smoothed vs original Gaussian motion]*
 <!-- LaTeX: \label{fig:ekf viz}, figures/ekf-viz.pdf -->
@@ -144,12 +144,12 @@ The velocity field visualizations demonstrate that our method produces physicall
 
 ### Ablation Study
 
-<img src="image-7.png" alt="Component Analysis" style="width: 60%; height: auto; margin: 0 auto; display: block;">
+<img src="image-7.png" alt="Component Analysis" style="width: 50%; height: auto; margin: 0 auto; display: block;">
 
 *[Table 3: Component Analysis - effectiveness of velocity rendering, FAD, and flow losses]*
 <!-- LaTeX: \label{tab:abl-1} -->
 
-<img src="image-8.png" alt="Window Size Impact" style="width: 60%; height: auto; margin: 0 auto; display: block;">
+<img src="image-8.png" alt="Window Size Impact" style="width: 50%; height: auto; margin: 0 auto; display: block;">
 
 *[Table 4: Window Size Impact - sliding window parameter study]*
 <!-- LaTeX: \label{tab:abl num adj} -->
@@ -160,7 +160,7 @@ Key findings confirm the contribution of each component:
 - Multi-frame temporal windows (τ=8) provide optimal consistency
 - Flow-based losses focus optimization on dynamic content vs. photometric losses
 
-<img src="image-5.png" alt="Loss Visualization" style="width: 60%; height: auto; margin: 0 auto; display: block;">
+<img src="image-5.png" alt="Loss Visualization" style="width: 50%; height: auto; margin: 0 auto; display: block;">
 
 *[Figure 7: Loss Visualization - flow vs photometric loss distribution]*
 <!-- LaTeX: \label{fig:compare gradient}, figures/fig6.pdf -->
