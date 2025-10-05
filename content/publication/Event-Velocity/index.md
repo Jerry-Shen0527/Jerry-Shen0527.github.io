@@ -144,40 +144,40 @@ Below we present video comparisons between the baseline method and our approach 
 <th width="50%">Ours</th>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/balloon1-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/balloon1-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/balloon1-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/balloon1-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/beef-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/beef-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/beef-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/beef-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/dynamicface-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/dynamicface-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/dynamicface-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/dynamicface-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/flame-steak-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/flame-steak-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/flame-steak-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/flame-steak-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/martini-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/martini-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/martini-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/martini-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/salmon-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/salmon-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/salmon-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/salmon-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/sear-steak-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/sear-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/sear-steak-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/sear-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/truck-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/truck-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/truck-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/truck-ours.mp4" type="video/mp4"></video></td>
 </tr>
 <tr>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/umbrella-baseline.mp4" type="video/mp4"></video></td>
-<td width="50%"><video width="100%" controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/umbrella-ours.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/umbrella-baseline.mp4" type="video/mp4"></video></td>
+<td width="50%"><video width="100%" autoplay loop muted controls><source src="https://pub-577e0828db8a4e7b826341760ac2674d.r2.dev/umbrella-ours.mp4" type="video/mp4"></video></td>
 </tr>
 </table>
 
@@ -191,12 +191,12 @@ The velocity field visualizations demonstrate that our method produces physicall
 
 ### Ablation Study
 
-<img src="image-7.png" alt="Component Analysis" style="width: 50%; height: auto; margin: 0 auto; display: block;">
+<img src="image-7.png" alt="Component Analysis" style="width: 100%; height: auto; margin: 0 auto; display: block;">
 
 *[Table 3: Component Analysis - effectiveness of velocity rendering, FAD, and flow losses]*
 <!-- LaTeX: \label{tab:abl-1} -->
 
-<img src="image-8.png" alt="Window Size Impact" style="width: 50%; height: auto; margin: 0 auto; display: block;">
+<img src="image-8.png" alt="Window Size Impact" style="width: 100%; height: auto; margin: 0 auto; display: block;">
 
 *[Table 4: Window Size Impact - sliding window parameter study]*
 <!-- LaTeX: \label{tab:abl num adj} -->
@@ -207,7 +207,7 @@ Key findings confirm the contribution of each component:
 - Multi-frame temporal windows (τ=8) provide optimal consistency
 - Flow-based losses focus optimization on dynamic content vs. photometric losses
 
-<img src="image-5.png" alt="Loss Visualization" style="width: 50%; height: auto; margin: 0 auto; display: block;">
+<img src="image-5.png" alt="Loss Visualization" style="width: 100%; height: auto; margin: 0 auto; display: block;">
 
 *[Figure 7: Loss Visualization - flow vs photometric loss distribution]*
 <!-- LaTeX: \label{fig:compare gradient}, figures/fig6.pdf -->
