@@ -174,21 +174,54 @@
   </section>
   {{ end }}
   
-  <!-- Citation Section -->
+  <!-- BibTeX Citation Section -->
   {{ if .Params.show_citation }}
-  <section class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">Citation</h2>
-    <div class="mx-auto">
+  <section class="mb-8" id="BibTeX">
+    <div class="container mx-auto">
+      <div class="bibtex-header flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">BibTeX</h2>
+        <button class="copy-bibtex-btn inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <svg class="w-4 h-4 mr-2" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"></path>
+          </svg>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
       <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-        <pre class="text-sm text-gray-800 dark:text-gray-200 text-left overflow-x-auto" style="white-space: pre-wrap; tab-size: 4;"><code>{{ if .Params.custom_citation }}{{ .Params.custom_citation }}{{ else }}@article{{ "{" }}{{ .Title | replaceRE "[^a-zA-Z0-9]" "" | lower }},
+        <pre id="bibtex-code" class="text-sm text-gray-800 dark:text-gray-200 text-left overflow-x-auto" style="white-space: pre-wrap; tab-size: 4;"><code>{{ if .Params.custom_citation }}{{ .Params.custom_citation }}{{ else }}{{ $citationType := .Params.citation_type | default "article" }}@{{ $citationType }}{{ "{" }}{{ .Title | replaceRE "[^a-zA-Z0-9]" "" | lower }},
     title={{ "{" }}{{ .Title }}{{ "}" }},
-    author={{ "{" }}{{ range $i, $author := .Params.authors }}{{ if $i }}, {{ end }}{{ if eq $author "admin" }}Pengfei Shen{{ else }}{{ $author | replaceRE "\\*$" "" | replaceRE "\\^[0-9]+\\^" "" }}{{ end }}{{ end }}{{ "}" }},
-    year={{ "{" }}{{ .Date.Year }}{{ "}" }},{{ if .Params.publication_short }}
-    journal={{ "{" }}{{ .Params.publication_short }}{{ "}" }},{{ end }}
+    author={{ "{" }}{{ range $i, $author := .Params.authors }}{{ if $i }}, {{ end }}{{ $cleanAuthor := $author | replaceRE "\\*$" "" | replaceRE "\\^[0-9]+\\^" "" | replaceRE "†" "" | replaceRE "_[0-9]+_" "" | replaceRE "~[0-9]+~" "" }}{{ if eq $cleanAuthor "admin" }}Pengfei Shen{{ else }}{{ $cleanAuthor }}{{ end }}{{ end }}{{ "}" }},
+    year={{ "{" }}{{ .Date.Year }}{{ "}" }},{{ if .Params.publication_short }}{{ if eq $citationType "inproceedings" }}
+    booktitle={{ "{" }}{{ .Params.publication_short }}{{ "}" }},{{ else }}
+    journal={{ "{" }}{{ .Params.publication_short }}{{ "}" }},{{ end }}{{ end }}
 {{ "}" }}{{ end }}</code></pre>
       </div>
     </div>
   </section>
+
+  <script>
+  function copyBibTeX() {
+    const bibtexCode = document.getElementById('bibtex-code');
+    const range = document.createRange();
+    range.selectNode(bibtexCode);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    
+    try {
+      document.execCommand('copy');
+      const button = document.querySelector('.copy-bibtex-btn .copy-text');
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      setTimeout(() => {
+        button.textContent = originalText;
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+    
+    window.getSelection().removeAllRanges();
+  }
+  </script>
   {{ end }}
 </div>
 </div>
