@@ -8,6 +8,7 @@ publication_types: ["article-conference"]
 publication_short: 'Proceedings of IEEE ISMAR 2025'
 publication: 'Proceedings of IEEE ISMAR 2025'
 url_pdf: 'https://arxiv.org/abs/2507.23704'
+url_code: 'https://github.com/Lagrangeli/FlowGaussian-VR'
 abstract: "High-fidelity 3D video reconstruction is essential for enabling real-time rendering of dynamic scenes with realistic motion in virtual and augmented reality (VR/AR). The deformation field paradigm of 3D Gaussian splatting has achieved near-photorealistic results in video reconstruction due to the great representation capability of deep deformation networks. However, in videos with complex motion and significant scale variations, deformation networks often overfit to irregular Gaussian trajectories, leading to suboptimal visual quality. Moreover, the gradient-based densification strategy designed for static scene reconstruction proves inadequate to address the absence of dynamic content. In light of these challenges, we propose a flow-empowered velocity field modeling scheme tailored for Gaussian video reconstruction, dubbed FlowGaussian-VR. It consists of two core components: a velocity field rendering (VFR) pipeline which enables optical flow-based optimization, and a flow-assisted adaptive densification (FAD) strategy that adjusts the number and size of Gaussians in dynamic regions. We validate our model's effectiveness on multi-view dynamic reconstruction and novel view synthesis with multiple real-world datasets containing challenging motion scenarios, demonstrating not only notable visual improvements (over 2.5 dB gain in PSNR) and less blurry artifacts in dynamic textures, but also regularized and trackable per-Gaussian trajectories."
 
 featured_caption: "**Left**: Deformation-based 4DGS encounters difficulties in reconstructing scenes and rendering novel views under challenging conditions, such as significant motion and other complex dynamics. Our method exhibits commendable performance on given scenes (e.g., \"cut-roasted-beef\"). **Middle**: We compare the ground-truth optical flow, the deformation network of baseline (4DGS), and the velocity field rendered by our method. **Right**: We render the velocity field for scene Gaussians, constrain it with flow-based losses, and employ the FAD strategy to add Gaussians for dynamic objects in the canonical space."
@@ -18,11 +19,11 @@ authors:
     - "Tongchen Zhang^2^"
     - admin^1^
     - "Weiwei Xu^2^"
-    - "Yifan Peng^1^*"
+    - "Yifan (Evan) Peng^1^*"
 
 author_affiliations:
     - "^1^The University of Hong Kong"
-    - "^2^State Key Laboratory of Computer-aided Design & Computer Graphics, Zhejiang University"
+    - "^2^Zhejiang University"
 
 author_notes: "†These authors contributed equally.  *Corresponding author"
 math: true
@@ -34,7 +35,7 @@ citation_type: "inproceedings"
 
 3D scene reconstruction is essential for immersive AR/VR applications, ranging from virtual modeling to autonomous driving and medical surgery. While 3D Gaussian Splatting (3DGS) has shown remarkable progress in reconstruction quality and rendering efficiency, dynamic scene reconstruction remains challenging.
 
-<img src="image.png" alt="Pipeline" style="width: 100%; height: auto; margin: 0 auto; display: block;">
+<img src="image.jpg" alt="Pipeline" style="width: 100%; height: auto; margin: 0 auto; display: block;">
 
 *[Figure 1: Pipeline Overview - velocity field modeling with optical flow constraints and FAD strategy]*
 <!-- LaTeX: \label{fig:pipeline}, figures/pipeline-v1.pdf -->
@@ -54,7 +55,7 @@ $$V(\mathbf{p}) = \sum_{i=1}^{N} \alpha_i \, v_i \, \prod_{j=1}^i (1 - \alpha_j)
 
 This rendered velocity field serves as a differentiable approximation of optical flow, enabling direct supervision of Gaussian motion through backpropagation.
 
-<img src="image-1.png" alt="Velocity Rendering Process" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
+<img src="image-1.jpg" alt="Velocity Rendering Process" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
 
 *[Figure 2: Velocity Rendering Process - alpha-blending of Gaussian velocities]*
 <!-- LaTeX: \label{fig:velocity rendering}, figures/VR.pdf -->
@@ -76,7 +77,7 @@ These losses work synergistically to constrain Gaussian motion while preserving 
 
 ### Flow-assisted Adaptive Densification (FAD)
 
-<img src="image-2.png" alt="FAD Strategy" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
+<img src="image-2.jpg" alt="FAD Strategy" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
 
 *[Figure 3: FAD Strategy - shows flow-guided Gaussian densification process]*
 <!-- LaTeX: \label{fig:fad}, figures/fad.pdf -->
@@ -102,7 +103,7 @@ EKF refines Gaussian motion by defining state transition $\mathbf{f}(\mathbf{x}_
 
 Key strategies include surface Gaussian filtering and accumulated flow localization to prevent error propagation.
 
-<img src="image-3.png" alt="TVR Trajectory Correction" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
+<img src="image-3.jpg" alt="TVR Trajectory Correction" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
 
 *[Figure 4: TVR Trajectory Correction - shows smoothed vs original Gaussian motion]*
 <!-- LaTeX: \label{fig:ekf viz}, figures/ekf-viz.pdf -->
@@ -117,7 +118,7 @@ We evaluate on two challenging datasets:
 
 We report standard metrics (PSNR, SSIM, LPIPS) and Dynamic PSNR (DPSNR) specifically for moving regions. Ground truth optical flow is obtained using RAFT, and dynamic masks are generated using SAM-2.
 
-<img src="image-6.png" alt="Quantitative Results Tables" style="width: 100%; height: auto; margin: 0 auto; display: block;">
+<img src="image-6.jpg" alt="Quantitative Results Tables" style="width: 100%; height: auto; margin: 0 auto; display: block;">
 
 *[Table 1: Quantitative Results on Nvidia Dataset]*
 <!-- LaTeX: \label{tab:nvidia-all-scene-1} -->
@@ -131,7 +132,7 @@ Our method achieves significant improvements over state-of-the-art baselines:
 - **Dynamic Regions**: 2.4 dB and 3.14 dB DPSNR improvement respectively
 - **Comparison with Methods**: Outperforms 4DGS, 4D-GS, SC-GS, and MotionGS across all scenes
 
-<img src="image-4.png" alt="Novel View Synthesis Results" style="width: 100%; height: auto; margin: 0 auto; display: block;">
+<img src="image-4.jpg" alt="Novel View Synthesis Results" style="width: 100%; height: auto; margin: 0 auto; display: block;">
 
 *[Figure 5: Novel View Synthesis Results - "Truck" scene with velocity field visualization]*
 <!-- LaTeX: \label{fig:sota nvidia-long}, figures/nvidia-sota.pdf -->
@@ -183,22 +184,22 @@ Below we present video comparisons between the baseline method and our approach 
 </tr>
 </table>
 
-<img src="fig8.PNG" alt="Qualitative Comparisons" style="width: 100%; height: auto; margin: 0 auto; display: block;">
+<img src="fig8.jpg" alt="Qualitative Comparisons" style="width: 100%; height: auto; margin: 0 auto; display: block;">
 
 *[Figure 6: Qualitative Comparisons - multiple scenes showing improved dynamic reconstruction]*
-<!-- LaTeX: \label{app fig:sota nvidia}, figures/new_fig8_nvidia.png -->
-<!-- LaTeX: \label{app fig:sota neu3d}, figures/fig8.PNG -->
+<!-- LaTeX: \label{app fig:sota nvidia}, figures/new_fig8_nvidia.jpg -->
+<!-- LaTeX: \label{app fig:sota neu3d}, figures/fig8.jpg -->
 
 The velocity field visualizations demonstrate that our method produces physically plausible Gaussian motion, with gradually enlarging Gaussians matching actual object dynamics, while baselines show inconsistent trajectories.
 
 ### Ablation Study
 
-<img src="image-7.png" alt="Component Analysis" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
+<img src="image-7.jpg" alt="Component Analysis" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
 
 *[Table 3: Component Analysis - effectiveness of velocity rendering, FAD, and flow losses]*
 <!-- LaTeX: \label{tab:abl-1} -->
 
-<img src="image-8.png" alt="Window Size Impact" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
+<img src="image-8.jpg" alt="Window Size Impact" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
 
 *[Table 4: Window Size Impact - sliding window parameter study]*
 <!-- LaTeX: \label{tab:abl num adj} -->
@@ -209,7 +210,7 @@ Key findings confirm the contribution of each component:
 - Multi-frame temporal windows (τ=8) provide optimal consistency
 - Flow-based losses focus optimization on dynamic content vs. photometric losses
 
-<img src="image-5.png" alt="Loss Visualization" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
+<img src="image-5.jpg" alt="Loss Visualization" style="max-width: min(500px, 100%); height: auto; margin: 0 auto; display: block;">
 
 *[Figure 7: Loss Visualization - flow vs photometric loss distribution]*
 <!-- LaTeX: \label{fig:compare gradient}, figures/fig6.pdf -->
