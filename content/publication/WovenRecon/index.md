@@ -23,5 +23,4 @@ authors:
     - Milos Hasan
     - Beibei Wang
 
-featured: true
 ---

@@ -71,7 +71,7 @@ sections:
   - block: collection
     id: featured
     content:
-      title: Featured Publications
+      title: Recent Publications
       # text: |-
       #   <div class="text-center -mt-2 mb-2">
       #     <a href="./publication/" class="inline-flex items-center px-4 py-1 text-s font-medium text-blue-600 dark:text-blue-400 bg-transparent border border-blue-600 dark:border-blue-400 rounded hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-200">
@@ -81,23 +81,23 @@ sections:
       filters:
         folders:
           - publication
-        featured_only: true
+      #  featured_only: true
     design:
       view: card
       #columns: '2'
       spacing:
         padding: ["20px", "0", "20px", "0"]
 
-  - block: collection
-    content:
-      title: Recent Publications
-      filters:
-        folders:
-          - publication
-        exclude_featured: true
-    design:
-      columns: '2'
-      view: citation
+#  - block: collection
+#    content:
+#      title: Recent Publications
+#      filters:
+#        folders:
+#          - publication
+#        exclude_featured: true
+#    design:
+#      columns: '2'
+#      view: citation
 
   - block: collection
     id: projects

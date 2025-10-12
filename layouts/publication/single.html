@@ -185,8 +185,8 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-        <pre id="bibtex-code" class="text-sm text-gray-800 dark:text-gray-200 text-left overflow-x-auto" style="white-space: pre-wrap; tab-size: 4;"><code>{{ if .Params.custom_citation }}{{ .Params.custom_citation }}{{ else }}{{ $citationType := .Params.citation_type | default "article" }}@{{ $citationType }}{{ "{" }}{{ .Title | replaceRE "[^a-zA-Z0-9]" "" | lower }},
+      <div class="bg-gray-100 dark:bg-gray-900 rounded-lg p-4">
+        <pre id="bibtex-code" class="text-sm text-gray-800 dark:text-gray-100 text-left overflow-x-auto" style="white-space: pre-wrap; tab-size: 4;"><code>{{ if .Params.custom_citation }}{{ .Params.custom_citation }}{{ else }}{{ $citationType := .Params.citation_type | default "article" }}@{{ $citationType }}{{ "{" }}{{ .Title | replaceRE "[^a-zA-Z0-9]" "" | lower }},
     title={{ "{" }}{{ .Title }}{{ "}" }},
     author={{ "{" }}{{ range $i, $author := .Params.authors }}{{ if $i }}, {{ end }}{{ $cleanAuthor := $author | replaceRE "\\*$" "" | replaceRE "\\^[0-9]+\\^" "" | replaceRE "†" "" | replaceRE "_[0-9]+_" "" | replaceRE "~[0-9]+~" "" }}{{ if eq $cleanAuthor "admin" }}Pengfei Shen{{ else }}{{ $cleanAuthor }}{{ end }}{{ end }}{{ "}" }},
     year={{ "{" }}{{ .Date.Year }}{{ "}" }},{{ if .Params.publication_short }}{{ if eq $citationType "inproceedings" }}
