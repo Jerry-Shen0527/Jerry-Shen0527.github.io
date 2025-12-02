@@ -16,7 +16,7 @@ authors:
     - "Feifan Qu^1^"
     - "Li Liao^1^"
     - "Ruizhen Hu^2^"
-    - "Yifan Peng^1^*"
+    - "Yifan (Evan) Peng^1^*"
 
 author_affiliations:
     - "^1^The University of Hong Kong"
@@ -25,3 +25,18 @@ author_affiliations:
 author_notes: "*Corresponding author"
 math: true
 ---
+
+
+## Introduction
+
+Research on computational 3D visual artworks in the graphics community explores the creation and manipulation of optical illusions that leverage 3D effects to engage and deceive the viewer's perception. Representative artworks in this domain include scratch or abrasion holograms, which exhibit compelling visual effects by representing virtual geometry using scratches. The fundamental principle of scratch holography involves the interaction between a moving camera view and varying light paths, resulting in dynamic highlights that shift correspondingly. When the motion of a highlight aligns with the movement of a sampled point on a virtual object within the view, it effectively serves as a substitute for that virtual point.
+
+However, previous works have not extensively studied the luminance of highlights—most assume that as long as the highlight moves correctly, its luminance remains unaltered. This distinction is noteworthy in practice, as by modulating the luminance of the scratch highlight, one can incorporate shading effects into the virtual space, enhancing the representation with greater detail. Additionally, most scratch design pipelines focus on planar surfaces, overlooking how surface curvatures impact light reflection behavior.
+
+This work addresses these challenges by proposing a framework to specify scratches that represent both highlight movement and luminance variations.
+
+## Method Overview
+
+<img src="pipeline.webp" alt="Pipeline" style="width: 100%; height: auto; margin: 0 auto; display: block;">
+
+Our method aims
