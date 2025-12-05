@@ -38,5 +38,3 @@ This work addresses these challenges by proposing a framework to specify scratch
 ## Method Overview
 
 <img src="pipeline.webp" alt="Pipeline" style="width: 100%; height: auto; margin: 0 auto; display: block;">
-
-Our method aims
