@@ -6,7 +6,7 @@ date: 2025-12-10
 
 publication_types: ["article-conference"]
 publication: '*Proceedings of ACM SIGGRAPH Asia 2025 (Technical Papers)*'
-url_pdf: 'https://dl-acm-org.eproxy.lib.hku.hk/doi/10.1145/3757377.3763928'
+url_pdf: 'https://dl.acm.org/doi/10.1145/3757377.3763928'
 abstract: "Scratch-represented 3D visual arts can create compelling visual effects by manipulating light reflections across surfaces. Established works, such as those involving scratch holograms, have realized impressive multi-view imagery effects of reflection arts. However, creating a continuous view of 3D virtual objects with shading effects, especially view-dependent shading remains a challenge. Yet, most reported works are demonstrated on planar surfaces, leaving exploring the potential benefits of leveraging curved surfaces for diverse imagery scenarios an interesting research avenue. This work explores the continuous view-dependent imagery with rich shading effects via scratch-based reflection, whose design space has the potential to be extended to arbitrary curved surfaces. This is achieved by solving the ordinary differential equations under constraints calculated from established bidirectional reflectance distribution function models to optimize scratch distribution on substrate surfaces. Importantly, we create real-world examples by manufacturing optimized reflectors using off-the-shelf carving machines, delivering state-of-the-art specular view-dependent imagery that features continuous and realistic shading effects on both planar and developable curved surfaces."
 
 featured: true
