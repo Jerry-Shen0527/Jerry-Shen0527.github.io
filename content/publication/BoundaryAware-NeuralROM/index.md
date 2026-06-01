@@ -19,6 +19,9 @@ authors:
     - "admin*"
     - "Yifan (Evan) Peng†"
 
+author_affiliations:
+    - "The University of Hong Kong"
+
 math: true
 
 tags:

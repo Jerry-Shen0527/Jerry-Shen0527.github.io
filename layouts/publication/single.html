@@ -31,7 +31,7 @@
               {{ $authorLinks = $authorLinks | append $authorName }}
             {{ end }}
           {{ else if (strings.Contains . "admin") }}
-            {{ $authorName = . | replaceRE "admin" "Pengfei Shen" | replaceRE "\\^([0-9]+)\\^" "<sup>$1</sup>" | safeHTML }}
+            {{ $authorName = . | replaceRE "admin" "Pengfei Shen" | replaceRE "\\^([0-9,]+)\\^" "<sup>$1</sup>" | safeHTML }}
             {{ $authorPage := site.GetPage "/authors/admin" }}
             {{ if and $authorPage $authorPage.Params.external_link }}
               {{ $authorLinks = $authorLinks | append (printf "<a href=\"%s\" target=\"_blank\" rel=\"noopener\" class=\"text-primary-600 dark:text-primary-400 hover:underline\">%s</a>" $authorPage.Params.external_link $authorName) }}
@@ -39,8 +39,8 @@
               {{ $authorLinks = $authorLinks | append $authorName }}
             {{ end }}
           {{ else }}
-            {{ $authorName = . | replaceRE "\\^([0-9]+)\\^" "<sup>$1</sup>" | safeHTML }}
-            {{ $cleanAuthorForPage := . | replaceRE "\\^[0-9]+\\^" "" | replaceRE "\\*$" "" | replaceRE "†" "" | lower | replaceRE " " "-" }}
+            {{ $authorName = . | replaceRE "\\^([0-9,]+)\\^" "<sup>$1</sup>" | safeHTML }}
+            {{ $cleanAuthorForPage := . | replaceRE "\\^[0-9,]+\\^" "" | replaceRE "\\*$" "" | replaceRE "†" "" | lower | replaceRE " " "-" }}
             {{ $authorPage := site.GetPage (printf "/authors/%s" $cleanAuthorForPage) }}
             {{ if and $authorPage $authorPage.Params.external_link }}
               {{ $authorLinks = $authorLinks | append (printf "<a href=\"%s\" target=\"_blank\" rel=\"noopener\" class=\"text-primary-600 dark:text-primary-400 hover:underline\">%s</a>" $authorPage.Params.external_link $authorName) }}
@@ -60,19 +60,18 @@
         </div>
         {{ end }}
         
-        {{ if .Params.author_notes }}
+        {{ $hasJoint := false }}
+        {{ $hasCorr := false }}
+        {{ range .Params.authors }}
+          {{ if strings.Contains . "*" }}{{ $hasJoint = true }}{{ end }}
+          {{ if strings.Contains . "†" }}{{ $hasCorr = true }}{{ end }}
+        {{ end }}
+        {{ if or $hasJoint $hasCorr }}
         <div class="text-sm text-gray-600 dark:text-gray-400 mt-4 italic font-normal">
-          {{ if reflect.IsSlice .Params.author_notes }}
-            {{ $uniqueNotes := slice }}
-            {{ range .Params.author_notes }}
-              {{ if not (in $uniqueNotes .) }}
-                {{ $uniqueNotes = $uniqueNotes | append . }}
-              {{ end }}
-            {{ end }}
-            {{ delimit $uniqueNotes ", " }}
-          {{ else }}
-            {{ .Params.author_notes }}
-          {{ end }}
+          {{ $notes := slice }}
+          {{ if $hasJoint }}{{ $notes = $notes | append "*Joint first author" }}{{ end }}
+          {{ if $hasCorr }}{{ $notes = $notes | append "†Corresponding author" }}{{ end }}
+          {{ delimit $notes "&nbsp;&nbsp;" | safeHTML }}
         </div>
         {{ end }}
       </div>
@@ -198,7 +197,7 @@
       <div class="bg-gray-100 dark:bg-gray-900 rounded-lg p-4">
         <pre id="bibtex-code" class="text-sm text-gray-800 dark:text-gray-100 text-left overflow-x-auto" style="white-space: pre-wrap; tab-size: 4;"><code>{{ if .Params.custom_citation }}{{ .Params.custom_citation }}{{ else }}{{ $citationType := .Params.citation_type | default "article" }}@{{ $citationType }}{{ "{" }}{{ .Title | replaceRE "[^a-zA-Z0-9]" "" | lower }},
     title={{ "{" }}{{ .Title }}{{ "}" }},
-    author={{ "{" }}{{ range $i, $author := .Params.authors }}{{ if $i }}, {{ end }}{{ $cleanAuthor := $author | replaceRE "\\*$" "" | replaceRE "\\^[0-9]+\\^" "" | replaceRE "†" "" | replaceRE "_[0-9]+_" "" | replaceRE "~[0-9]+~" "" }}{{ if eq $cleanAuthor "admin" }}Pengfei Shen{{ else }}{{ $cleanAuthor }}{{ end }}{{ end }}{{ "}" }},
+    author={{ "{" }}{{ range $i, $author := .Params.authors }}{{ if $i }}, {{ end }}{{ $cleanAuthor := $author | replaceRE "\\*$" "" | replaceRE "\\^[0-9,]+\\^" "" | replaceRE "†" "" | replaceRE "_[0-9]+_" "" | replaceRE "~[0-9]+~" "" }}{{ if eq $cleanAuthor "admin" }}Pengfei Shen{{ else }}{{ $cleanAuthor }}{{ end }}{{ end }}{{ "}" }},
     year={{ "{" }}{{ .Date.Year }}{{ "}" }},{{ if .Params.publication_short }}{{ if eq $citationType "inproceedings" }}
     booktitle={{ "{" }}{{ .Params.publication_short }}{{ "}" }},{{ else }}
     journal={{ "{" }}{{ .Params.publication_short }}{{ "}" }},{{ end }}{{ end }}

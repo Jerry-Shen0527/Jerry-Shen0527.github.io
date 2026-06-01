@@ -20,10 +20,14 @@ featured: true
 #     PG-Demodu.jpg
     # teaserDescription: "Our method demodulates the BRDF pre-integration component from filtering and can be easily integrated into existing filtering algorithms. By combining with our method, both SVGF and ReLAX are able to preserve the fine details from BRDF maps much better."
 authors:
-    - Tao Zhuang
-    - admin
-    - "Beibei Wang†"
-    - "Ligang Liu"
+    - "Tao Zhuang^1^"
+    - "admin^1^"
+    - "Beibei Wang^2^†"
+    - "Ligang Liu^1^"
+
+author_affiliations:
+    - "^1^University of Science and Technology of China"
+    - "^2^Nanjing University of Science and Technology"
 
 ---
 
