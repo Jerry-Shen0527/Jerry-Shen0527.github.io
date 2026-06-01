@@ -111,3 +111,8 @@ article main .group img.rounded-full {
     gap: 0 !important;
 }
 
+/* Hide "See all publications" button on homepage */
+.blox-collection .mt-10.flex.justify-center:has(a[href="/publication/"]) {
+    display: none !important;
+}
+
