@@ -33,7 +33,7 @@ interests:
   - Realistic Rendering
 
 education:
-  - area: Ph.D. in Electrical and Electronic Engineering
+  - area: Ph.D. in Electrical and Computer Engineering
     institution: The University of Hong Kong
     date_start: 2024-11-01
     date_end: ''

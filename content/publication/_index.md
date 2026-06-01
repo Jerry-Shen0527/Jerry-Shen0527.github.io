@@ -14,3 +14,5 @@ banner:
   caption: ''
   image: ''
 ---
+
+<p class="text-sm text-gray-500 dark:text-gray-400 italic mb-2">*Joint first author &nbsp;&nbsp; †Corresponding author</p>

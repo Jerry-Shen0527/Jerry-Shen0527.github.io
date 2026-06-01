@@ -14,18 +14,18 @@ abstract: "High-fidelity 3D video reconstruction is essential for enabling real-
 featured_caption: "**Left**: Deformation-based 4DGS encounters difficulties in reconstructing scenes and rendering novel views under challenging conditions, such as significant motion and other complex dynamics. Our method exhibits commendable performance on given scenes (e.g., \"cut-roasted-beef\"). **Middle**: We compare the ground-truth optical flow, the deformation network of baseline (4DGS), and the velocity field rendered by our method. **Right**: We render the velocity field for scene Gaussians, constrain it with flow-based losses, and employ the FAD strategy to add Gaussians for dynamic objects in the canonical space."
 
 authors:
-    - "Zhenyang Li^1^†"
-    - "Xiaoyang Bai^1^†"
+    - "Zhenyang Li^1^*"
+    - "Xiaoyang Bai^1^*"
     - "Tongchen Zhang^2^"
     - admin^1^
     - "Weiwei Xu^2^"
-    - "Yifan (Evan) Peng^1^*"
+    - "Yifan (Evan) Peng^1^†"
 
 author_affiliations:
     - "^1^The University of Hong Kong"
     - "^2^Zhejiang University"
 
-author_notes: "†These authors contributed equally.  *Corresponding author"
+author_notes: "*Joint first author. †Corresponding author."
 math: true
 show_citation: true
 citation_type: "inproceedings"

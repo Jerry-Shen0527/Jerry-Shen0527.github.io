@@ -13,10 +13,11 @@ abstract: "The 3D visual optical arts create fascinating special effects by care
 featured: true
 
 authors:
-    - admin
-    - Ruizeng Li
-    - Beibei Wang
-    - Ligang Liu
+    - "admin*"
+    - "Ruizeng Li*"
+    - "Beibei Wang†"
+    - "Ligang Liu†"
+
 ---
 
 

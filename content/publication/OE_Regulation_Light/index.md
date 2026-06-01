@@ -16,5 +16,5 @@ authors:
     - admin
     - Yifan Peng
     - Hujun Bao
-    - Rui Wang
+    - "Rui Wang†"
 ---

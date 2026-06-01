@@ -19,7 +19,7 @@ authors:
     - Xinyang Liu
     - Runze Wang
     - admin
-    - Ligang Liu
-    - Beibei Wang
+    - "Ligang Liu"
+    - "Beibei Wang†"
 
 ---

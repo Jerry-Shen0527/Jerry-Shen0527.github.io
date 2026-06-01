@@ -22,8 +22,8 @@ featured: true
 authors:
     - Tao Zhuang
     - admin
-    - Beibei Wang
-    - Ligang Liu
+    - "Beibei Wang†"
+    - "Ligang Liu"
 
 ---
 

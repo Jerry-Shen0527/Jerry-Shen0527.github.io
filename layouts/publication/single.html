@@ -63,9 +63,15 @@
         {{ if .Params.author_notes }}
         <div class="text-sm text-gray-600 dark:text-gray-400 mt-4 italic font-normal">
           {{ if reflect.IsSlice .Params.author_notes }}
-            {{ delimit .Params.author_notes ", " | markdownify }}
+            {{ $uniqueNotes := slice }}
+            {{ range .Params.author_notes }}
+              {{ if not (in $uniqueNotes .) }}
+                {{ $uniqueNotes = $uniqueNotes | append . }}
+              {{ end }}
+            {{ end }}
+            {{ delimit $uniqueNotes ", " }}
           {{ else }}
-            {{ .Params.author_notes | markdownify }}
+            {{ .Params.author_notes }}
           {{ end }}
         </div>
         {{ end }}

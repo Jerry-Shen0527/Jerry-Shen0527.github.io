@@ -1,0 +1,231 @@
+%-------------------------------------------------------------------------------
+% Pengfei Shen's Curriculum Vitae
+% Adapted from gboeing/cv style: clean academic layout using description lists
+% Compile with: pdflatex resume.tex && biber resume && pdflatex resume.tex && pdflatex resume.tex
+%-------------------------------------------------------------------------------
+\RequirePackage[l2tabu,orthodox]{nag}
+\documentclass[11pt,a4paper]{article}
+
+% --- Encoding and Fonts ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+
+% --- Packages ---
+\usepackage[babel=true]{microtype}
+\usepackage{datetime}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{tabto}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[backend=biber,style=authoryear,maxnames=99,sorting=none]{biblatex}
+
+% --- Use "First Last" format for all authors (no inversion) ---
+\DeclareNameAlias{author}{first-last}
+\DeclareNameAlias{default}{first-last}
+
+% --- Highlight own name in bold (via mkbibname) ---
+\renewcommand*{\mkbibnamegiven}[1]{#1}
+\renewcommand*{\mkbibnamefamily}[1]{#1}
+
+\bibliography{cv/references}
+
+% --- Hyperref (last for compatibility) ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks  = true,
+    urlcolor    = black,
+    citecolor   = black,
+    linkcolor   = black,
+    pdfauthor   = {Pengfei Shen},
+    pdftitle    = {Pengfei Shen: Curriculum Vitae},
+    pdfsubject  = {Curriculum Vitae},
+    pdfpagemode = UseNone
+}
+
+% --- Name ---
+\newcommand{\myname}{Pengfei Shen}
+
+% --- Tab width for list items with left-aligned date ---
+\newcommand{\listtabwidth}{2.8cm}
+
+% --- Title font ---
+\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+
+% --- Section heading style ---
+\titleformat{\section}{\normalfont\large\bfseries}{}{}{}{}
+\titlespacing{\section}{0pt}{20pt plus 4pt minus 4pt}{6pt plus 2pt minus 2pt}
+
+% --- Page margins ---
+\geometry{left=1.5cm, top=1.5cm, right=1.5cm, bottom=1.8cm}
+
+% --- No paragraph indentation ---
+\setlength\parindent{0em}
+
+% --- Line spacing ---
+\setstretch{0.95}
+
+% --- Space between list items ---
+\newcommand{\listitemspace}{0.15em}
+
+% --- Footnote symbol for equal contribution ---
+\newcommand{\equalcontrib}{\textsuperscript{$\dagger$}}
+
+% --- Make unordered lists without bullets and compact spacing ---
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+                \setlength{\parskip}{0em}
+                \setlength{\itemsep}{\listitemspace}
+                \setlength{\parsep}{\listitemspace}}}
+{\end{list}}
+
+% --- Make tabbed lists so content is left-aligned next to dates ---
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+    labelindent=0em,
+    topsep=0em,
+    partopsep=0em,
+    itemsep=\listitemspace,
+    parsep=\listitemspace,
+    font=\normalfont}
+
+% --- Print month and year ---
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% --- Horizontal rule ---
+\newcommand{\hr}{\vspace{0.3em}\noindent\hrule\vspace{0.5em}}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+\raggedright{}
+
+% --- Header: Name ---
+\namefont{\myname}
+
+% --- Contact info ---
+\vspace{0.6em}
+\begin{minipage}[t]{0.48\textwidth}
+    Department of Electrical and Computer Engineering\\
+    The University of Hong Kong\\
+    Hong Kong, China
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \raggedleft{}
+    \href{mailto:pengfei.shen@connect.hku.hk}{pengfei.shen@connect.hku.hk}\\
+    \href{https://jerry-shen0527.github.io}{jerry-shen0527.github.io}\\
+    \href{https://scholar.google.com/citations?user=02yniQsAAAAJ}{Google Scholar}
+\end{minipage}
+
+\hr
+
+%===============================================================================
+\section*{Research Interests}
+%===============================================================================
+
+\begin{itemize}
+    \item Computational Imaging, Differentiable Rendering, Realistic Rendering
+\end{itemize}
+
+%===============================================================================
+\section*{Education}
+%===============================================================================
+
+\begin{tablist}
+    \item[Ph.D.] \tab{}Electrical and Computer Engineering, The University of Hong Kong, 2024--present \\
+                  \hspace{1em}Advised by Prof.\ Yifan (Evan) Peng
+    \item[M.S.]  \tab{}Applied Mathematics, University of Science and Technology of China, 2021--2024 \\
+                  \hspace{1em}Advised by Prof.\ Ligang Liu
+    \item[B.S.]  \tab{}Physics, University of Science and Technology of China, 2017--2021 \\
+                  \hspace{1em}Dual B.E.\ in Computer Science. GPA: 87.35/100 \\
+                  \hspace{1em}Thesis: \textit{An Improved Rendering Method: Consideration of Optical Polarization Effect in Scattering Process}
+\end{tablist}
+
+%===============================================================================
+\section*{Publications}
+%===============================================================================
+
+\begin{refsection}
+    \nocite{Liao:2026:BoundaryAware}
+    \nocite{Li:2026:WovenRecon}
+    \nocite{Li:2025:FlowGaussian}
+    \nocite{Shen:2025:ODEGlints}
+    \nocite{Li:2025:EventTracer}
+    \nocite{Qu:2025:XR}
+    \nocite{Wei:2025:OE}
+    \nocite{Li:2025:BPSDF}
+    \nocite{Shen:2023:diffGlints}
+    \nocite{Zhuang:2021:Denoise}
+    \printbibliography[heading=none]
+\end{refsection}
+\vspace{0.3em}
+{\footnotesize \textsuperscript{$\dagger$}Equal contribution.}
+
+%===============================================================================
+\section*{Experience}
+%===============================================================================
+
+\begin{tablist}
+    \item[2023] \tab{}\textbf{Technology Researcher Intern}, Tencent Games, Shenzhen, China \\
+                  \hspace{1em}Worked on a differentiable renderer for 3D modelling tasks.
+    \item[2023] \tab{}\textbf{Research Assistant}, Nankai University, Tianjin, China \\
+                  \hspace{1em}Participated in a woven fabric reconstruction project; wrote a path tracer rendering billions of fibers at interactive framerates. Collaborated with researchers from UCSB, Adobe, and Cornell.
+    \item[2022] \tab{}\textbf{Graphics Engineer Intern}, MiHoYo Co.\ Ltd., Shanghai, China \\
+                  \hspace{1em}Implemented \textit{Tessellation-Free Displacement Mapping for Ray Tracing} into Unreal Engine.
+\end{tablist}
+
+%===============================================================================
+\section*{Teaching}
+%===============================================================================
+
+\begin{tablist}
+    \item[2024] \tab{}\textbf{Teaching Assistant}, Computer Graphics, University of Science and Technology of China \\
+                  \hspace{1em}Lecturer: Prof.\ Ligang Liu. Main contributor to the
+                  \href{https://github.com/USTC-CG/USTC_CG_24}{course code skeleton}.
+    \item[2022] \tab{}\textbf{Teaching Assistant}, Computational Imaging (GAMES 204), Online \\
+                  \hspace{1em}Lecturer: Prof.\ Qilin Sun \& Prof.\ Evan Peng.
+    \item[2020--21] \tab{}\textbf{Teaching Assistant}, Physics Experiments, USTC \\
+                  \hspace{1em}Designed the open-ended experiment problems.
+\end{tablist}
+
+%===============================================================================
+\section*{Talks}
+%===============================================================================
+
+\begin{tablist}
+    \item[2023] \tab{}\textit{Scratch-based Reflection Art via Differentiable Rendering}, GAMES Seminar, Online
+    \item[2020] \tab{}\textit{Real-time Denoising Using BRDF Pre-integration Factorization}, Pacific Graphics 20+21, Online
+\end{tablist}
+
+%===============================================================================
+\section*{Awards}
+%===============================================================================
+
+\begin{tablist}
+    \item[2024] \tab{}USTC Outstanding Teaching Assistant
+    \item[2023] \tab{}Chinese National Scholarship (top 5\%)
+    \item[2023] \tab{}First Place, CSIG Image and Graphics Challenge --- AMD Fluid Simulation Track
+    \item[2019] \tab{}First Prize, China Undergraduate Physics Tournament
+\end{tablist}
+
+%===============================================================================
+\section*{Skills}
+%===============================================================================
+
+\begin{tablist}
+    \item[Programming] \tab{}C++, CUDA, Python, Vulkan, Unreal Engine, OpenUSD
+    \item[Modelling] \tab{}Blender, Houdini
+    \item[Languages] \tab{}Chinese (Native), English (TOEFL iBT 113)
+\end{tablist}
+
+%===============================================================================
+\vfill
+\begin{center}
+    Updated \monthyeardate\today
+\end{center}
+
+\end{document}

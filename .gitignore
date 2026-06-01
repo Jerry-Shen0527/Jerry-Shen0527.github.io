@@ -8,3 +8,18 @@ jsconfig.json
 node_modules/
 go.sum
 .hugo_build.lock
+
+# LaTeX auxiliary files
+cv/*.aux
+cv/*.bbl
+cv/*.bcf
+cv/*.blg
+cv/*.fdb_latexmk
+cv/*.fls
+cv/*.log
+cv/*.out
+cv/*.run.xml
+cv/*.synctex.gz
+cv/*.pdf
+cv/*.bbl-SAVE-ERROR
+cv/cv/*.aux

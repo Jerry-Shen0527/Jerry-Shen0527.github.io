@@ -16,13 +16,8 @@ featured: true
 
 authors:
     - "Li Liao*"
-    - admin*
-    - "Yifan (Evan) Peng*"
-
-author_notes:
-    - "Equal contribution"
-    - "Equal contribution"
-    - "Corresponding author"
+    - "admin*"
+    - "Yifan (Evan) Peng†"
 
 math: true
 

@@ -72,7 +72,8 @@ sections:
     id: featured
     content:
       title: Publications
-      # text: |-
+      text: |-
+        <p class="text-sm text-gray-500 dark:text-gray-400 italic">*Joint first author &nbsp;&nbsp; †Corresponding author</p>
       #   <div class="text-center -mt-2 mb-2">
       #     <a href="./publication/" class="inline-flex items-center px-4 py-1 text-s font-medium text-blue-600 dark:text-blue-400 bg-transparent border border-blue-600 dark:border-blue-400 rounded hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-200">
       #       See all Publications →
@@ -87,7 +88,7 @@ sections:
       view: card
       #columns: '2'
       spacing:
-        padding: ["20px", "0", "20px", "0"]
+        padding: ["0", "0", "20px", "0"]
 
 #  - block: collection
 #    content:

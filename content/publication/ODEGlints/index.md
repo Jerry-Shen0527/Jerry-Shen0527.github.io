@@ -16,13 +16,13 @@ authors:
     - "Feifan Qu^1^"
     - "Li Liao^1^"
     - "Ruizhen Hu^2^"
-    - "Yifan (Evan) Peng^1^*"
+    - "Yifan (Evan) Peng^1^†"
 
 author_affiliations:
     - "^1^The University of Hong Kong"
     - "^2^Shenzhen University"
 
-author_notes: "*Corresponding author"
+author_notes: "†Corresponding author"
 math: true
 ---
 
